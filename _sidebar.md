@@ -1,4 +1,8 @@
 - Linux
+  - [操作系统](linux/system.md)
+  - [常用命令](linux/cmd.md)
+
+- Linux
 
   - [RabbitMQ](linux/centos_instal_rabbitmq.md)
   - [OpenVpn](linux/centos_openvpn.md)

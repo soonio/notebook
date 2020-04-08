@@ -19,11 +19,17 @@
       maxLevel: 4,
       subMaxLevel: 2,
       loadSidebar: true,
+      alias:{
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
       autoHeader: true,
       mergeNavbar: true,
+      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       auto2top: true
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-php.js"></script>
 </body>
 </html>
