@@ -1,7 +1,9 @@
 - Linux
-  - [操作系统](linux/system.md)
-  - [常用命令](linux/cmd.md)
-
+  - [操作系统](linux2/system.md)
+  - [常用命令](linux2/cmd.md)
+  - [Shell](linux2/shell.md)
+  - [基础软件](linux2/soft.md)
+  
 - Linux
 
   - [RabbitMQ](linux/centos_instal_rabbitmq.md)
@@ -57,4 +59,3 @@
 - OTHER
 
   - [问题](other/PHP连续数字索引引发的问题及解决方式.md)
- 

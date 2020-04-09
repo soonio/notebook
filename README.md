@@ -31,10 +31,9 @@
 - [ ] ELK应用
 - [ ] 小型企业内网服务搭建
 - [ ] 其他
-## 最新更新时间
-
-{docsify-updated}
 
 ## 致谢
 
  本文档Power by [docsify](https://docsify.js.org/), 相关使用方式参考[官方文档](https://docsify.js.org/#/quickstart)
+
+Update At : {docsify-updated}
