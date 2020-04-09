@@ -1,6 +1,6 @@
 ![logo](_media/icon.svg)
 
-# 清流的笔记本呀 <small>x.0</small>
+# [清流的烂笔头呀](http://iosoon.cn/#/?id=清流的烂笔头呀) <small>1.0</small>
 
 > 只是为了学点东西，记一些笔记啦
 
