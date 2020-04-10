@@ -3,7 +3,7 @@
   - [常用命令](linux2/cmd.md)
   - [Shell](linux2/shell.md)
   - [基础软件](linux2/soft.md)
-  
+  - [软件安装](linux2/install.md)
 - Linux
 
   - [RabbitMQ](linux/centos_instal_rabbitmq.md)
@@ -23,22 +23,18 @@
   - [免密登录](linux/免密登陆.md)
   - [创建桌面图标](linux/创建桌面图标.md)
   - [常见HTTP状态码](linux/常见HTTP状态码.md)
-
 - Mysql
 
   - [优化](mysql/MySQL优化.md)
   - [快速造数据](mysql/Mysql制造数据.MD)
   - [知识准备](mysql/MySQL知识准备.md)
-
 - JS
 
   - [操作Cookie](js/JS操作cookie.md)
   - [跳转页面的几种方式](js/JS跳转页面的几种方式.md)
-
 - Nginx
 
   - [Nginx虚拟域名](nginx/centos_nginx_vhost.md)
-
 - PHP
 
   - [安装扩展](php/PHP7扩展安装.md)
@@ -47,15 +43,14 @@
   - [常见问题](php/PHP常见问题.md)
   - [设计模式](php/PHP的一些设计模式.md)
   - [编程规范](php/PHP编程规范.md)
-
 - Python
 
   - [基础命令](python/execl-combine.py)
-
 - REDIS
 
   - [入门](redis/Redis入门.md)
-
+- Redis
+  - [用法](redis2/usage.md)
 - OTHER
 
   - [问题](other/PHP连续数字索引引发的问题及解决方式.md)
