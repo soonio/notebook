@@ -4,6 +4,7 @@
   - [Shell](linux2/shell.md)
   - [基础软件](linux2/soft.md)
   - [软件安装](linux2/install.md)
+  - [计划任务](linux2/crontab.md)
 - Linux
 
   - [RabbitMQ](linux/centos_instal_rabbitmq.md)

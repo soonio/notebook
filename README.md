@@ -1,6 +1,6 @@
 # 清流的烂笔头呀
 
-> Just for recoding some important and funny thins!
+> Just for recoding some important and funny things!
 
 ## 路线图
 

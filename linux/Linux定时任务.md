@@ -46,7 +46,7 @@ MAILTO=root
 |/etc/cron.deny|该文件中所列用户不允许使用crontab命令|
 |/etc/cron.allow|该文件中所列用户允许使用crontab命令|
 |/var/spool/cron/|所有用户crontab文件存放的目录,以用户名命名|
- 
+
 
 crontab文件的含义：
 
@@ -54,7 +54,7 @@ crontab文件的含义：
 
 ```minute   hour   day   month   week   command```
 
-    
+
     minute： 表示分钟，可以是从0到59之间的任何整数。
     
     hour：表示小时，可以是从0到23之间的任何整数。
@@ -69,6 +69,7 @@ crontab文件的含义：
 
  
 
+
     在以上各个字段中，还可以使用以下特殊字符：
     
     星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。
@@ -80,6 +81,7 @@ crontab文件的含义：
     正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。
 
  
+
 
 ## 二、crond服务
 
@@ -100,7 +102,7 @@ crontab文件的含义：
 |```ntsysv```|查看crontab服务是否已设置为开机启动
 |chkconfig –level 35 crond on|加入开机自动启动|不可用
 
- 
+
 ## 三、crontab命令详解
 
 1．命令格式：
@@ -138,11 +140,11 @@ EDITOR=vi; export EDITOR
 然后保存并退出。不妨创建一个名为<user> cron的文件，其中<user>是用户名，例如， davecron。在该文件中加入如下的内容。
 
       # (put your own initials here)echo the date to the console every
-
+    
       # 15minutes between 6pm and 6am
-
+    
       0,15,30,45 18-06 * * * /bin/echo 'date' > /dev/console
-
+    
     保存并退出。确信前面5个域用空格分隔。
 
 在 上面的例子中，系统将每隔1 5分钟向控制台输出一次当前时间。如果系统崩溃或挂起，从最后所显示的时间就可以一眼看出系统是什么时间停止工作的。在有些 系统中，用tty1来表示控制台，可以根据实际情况对上面的例子进行相应的修改。为了提交你刚刚创建的crontab文件，可以把这个新创建的文件作为 cron命令的参数：
@@ -158,13 +160,13 @@ EDITOR=vi; export EDITOR
    为了列出crontab文件，可以用：
 
      $ crontab -l
-
+    
      0,15,30,45,18-06 * * * /bin/echo `date` > dev/tty1
 
 你将会看到和上面类似的内容。可以使用这种方法在$ H O M E目录中对crontab文件做一备份：
 
      $ crontab -l > $HOME/mycron
-
+    
     这样，一旦不小心误删了crontab文件，可以用上一节所讲述的方法迅速恢复。
 
 3). 编辑crontab文件
@@ -178,7 +180,7 @@ EDITOR=vi; export EDITOR
 我们在编辑crontab文件时，没准会加入新的条目。例如，加入下面的一条：
 
     # DT:delete core files,at 3.30am on 1,7,14,21,26,26 days of each month
-
+    
      30 3 1,7,14,21,26 * * /bin/find -name "core' -exec rm {} \;
 
 现在保存并退出。最好在crontab文件的每一个条目之上加入一条注释，这样就可以知道它的功能、运行时间，更为重要的是，知道这是哪位用户的作业。
@@ -186,15 +188,15 @@ EDITOR=vi; export EDITOR
 现在让我们使用前面讲过的crontab -l命令列出它的全部信息：
 
     $ crontab -l 
-
+    
     # (crondave installed on Tue May 4 13:07:43 1999)
-
+    
     # DT:ech the date to the console every 30 minites
 
    0,15,30,45 18-06 * * * /bin/echo `date` > /dev/tty1
 
     # DT:delete core files,at 3.30am on 1,7,14,21,26,26 days of each month
-
+    
     30 3 1,7,14,21,26 * * /bin/find -name "core' -exec rm {} \;
 
 4). 删除crontab文件
@@ -208,7 +210,7 @@ EDITOR=vi; export EDITOR
 如果不小心误删了crontab文件，假设你在自己的$ H O M E目录下还有一个备份，那么可以将其拷贝到/var/spool/cron/<username>，其中<username>是用户名。如果由于权限问题无法完成拷贝，可以用：
 
      $ crontab <filename>
-
+    
     其中，<filename>是你在$ H O M E目录中副本的文件名。
 
 我建议你在自己的home目录中保存一个该文件的副本。我就有过类似的经历，有数次误删了crontab文件（因为r键紧挨在e键的右边）。这就是为什么有些系统文档建议不要直接编辑crontab文件，而是编辑该文件的一个副本，然后重新提交新的文件。
@@ -236,7 +238,7 @@ EDITOR=vi; export EDITOR
 ```
 3,15 8-11 * * * command
 ```
- 
+
 实例4：每隔两天的上午8点到11点的第3和第15分钟执行
 
 ```
@@ -272,7 +274,7 @@ EDITOR=vi; export EDITOR
 ```
 0,30 18-23 * * * /etc/init.d/smb restart
 ```
- 
+
 实例10：每星期六的晚上11 : 00 pm重启smb 
 
 ```
@@ -290,7 +292,7 @@ EDITOR=vi; export EDITOR
 ```
 * 23-7/1 * * * /etc/init.d/smb restart
 ```
- 
+
 
 实例13：每月的4号与每周一到周三的11点重启smb 
 
@@ -366,4 +368,3 @@ export RUN_CONF=/home/d139/conf/platform/cbp/cbp_jboss.conf
 
 千万别乱运行crontab -r。它从Crontab目录（/var/spool/cron）中删除用户的Crontab文件。删除了该用户的所有crontab都没了。
 
-在crontab中%是有特殊含义的，表示换行的意思。如果要用的话必须进行转义\%，如经常用的date ‘+%Y%m%d’在crontab里是不会执行的，应该换成date ‘+\%Y\%m\%d’。
