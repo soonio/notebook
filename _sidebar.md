@@ -19,7 +19,9 @@
   - [闭包](php/PHP匿名函数(闭包函数).md)
   - [常见问题](php/PHP常见问题.md)
   - [编程规范](php/PHP编程规范.md)
-
+- 工作
+  - [GitLab](work/gitlab.md)
+  - [Git-Runner](work/git-runner.md)
 - 旧日记
   - [RabbitMQ](linux/centos_instal_rabbitmq.md)
   - [OpenVpn](linux/centos_openvpn.md)

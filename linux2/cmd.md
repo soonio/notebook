@@ -136,6 +136,8 @@
 
   ```bash
   find	/etc	-name	init*	
+  ## 查找当前目录下名称中包含2019的文件并删除
+  find . -maxdepth 1 -name "*20190*" | xargs rm -rf
   ```
 
 ## 加压解压文件
