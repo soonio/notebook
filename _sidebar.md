@@ -15,6 +15,7 @@
 - PHP
   - [安装](php/install.md)
   - [扩展](php/ext.md)
+  - [扩展/pdo](php/ext-pdo.md)
   - [函数](php/function.md)
   - [闭包](php/PHP匿名函数(闭包函数).md)
   - [常见问题](php/PHP常见问题.md)
