@@ -7,6 +7,7 @@
   - [计划任务](linux2/crontab.md)
   - [进程管理](linux2/process.md)
   - [文件共享](linux2/samba.md)
+  - [免密登录](linux2/no-password.md)
 - 编程思想
   - [面向对象](mind/oop.md)
   - [设计模式](mind/design-pattern.md)
@@ -22,8 +23,12 @@
   - [编程规范](php/PHP编程规范.md)
 - Docker
   - [安装](docker/install.md)
-  - [命令](docker/cmd.md)
+  - [常用命令](docker/cmd.md)
   - [日志管理](docker/log.md)
+  - [网络管理](docker/network.md)
+  - [实践[Mysql]](docker/docker-mysql.md)
+  - [实践[Redis]](docker/docker-redis.md)
+  - [实践[Gitlab]](docker/docker-gitlab.md)
 - 工作
   - [GitLab](work/gitlab.md)
   - [Git-Runner](work/git-runner.md)
@@ -40,7 +45,6 @@
   - [常用命令](linux/Linux常用命令.md)
   - [脚本登录远程服务](linux/使用shell登陆远程服务器.md)
   - [跳板机](linux/使用跳板机映射内网服务到外网使用.md)
-  - [免密登录](linux/免密登陆.md)
   - [创建桌面图标](linux/创建桌面图标.md)
   - [常见HTTP状态码](linux/常见HTTP状态码.md)
   - [优化](mysql/MySQL优化.md)

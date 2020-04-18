@@ -16,3 +16,9 @@ docker run -it --rm -p 80:80 -v $(pwd):/home --name=test image:version sh
 docker exec -it test sh
 ```
 
+## 拉取镜像
+
+```bash
+docker pull redis
+```
+

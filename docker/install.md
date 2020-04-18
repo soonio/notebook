@@ -29,3 +29,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 systemctl enable docker
 ```
+
+## 修改镜像源
+/etc/sysconfig/docker
+```config
+OPTIONS='--selinux-enabled --log-driver=journald --registry-mirror=http://hub-mirror.c.163.com'
+```
+> 上面使用了网易云的镜像 http://hub-mirror.c.163.com  其他的自行百度
+

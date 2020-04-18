@@ -1,5 +1,3 @@
-# docker安装gitlab
-
 ## 拉取镜像
 ```
 docker pull gitlab/gitlab-ce:11.11.5-ce.0
