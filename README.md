@@ -6,12 +6,15 @@
 
 ## 路线图
 
+[Linux](/linux2/system), [编程思想](/mind/oop), [Redis缓存](/redis2/usage)，[Docker容器](/docker/install)，[工作工具方法](/work/gitlab)，[网络编程](/network/http-code), 微服务，SaaS服务，ELK
+
+## Web编程
 ```mermaid
 sequenceDiagram
-  Chrome->>Nginx: 访问服务器
   Linux->>+Nginx: 安装了nginx
   Linux->>+PHP: 安装了PHP
   Linux->>+Store: 安装了redis,memcache
+  Chrome->>Nginx: 访问服务器
   Nginx-->>-PHP: 把请求转发给PHP处理
   PHP->>+Store: 读取数据
   Store->>+PHP: 响应数据
