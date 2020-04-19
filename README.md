@@ -2,9 +2,22 @@
 
 > Just for recoding some important and funny things!
 
+本人作为一名PHP开发者，经常需要使用linux操作系统，并在linux操作系统上安装各类软件。同时通过配置各类软件，配合工作，完成公司的开发相关的任务。所以在此记录下本人在工作中，生活中掌握的，学到的一些知识，以及一些思考总结、解决问题的方法。
+
 ## 路线图
 
-本人作为一名PHP开发者，经常需要使用linux操作系统，并在linux操作系统上安装各类软件。同时通过配置各类软件，配合工作，完成公司的开发相关的任务。所以在此记录下本人在工作中，生活中掌握的，学到的一些知识，以及一些思考总结、解决问题的方法。
+```mermaid
+sequenceDiagram
+  Chrome->>Nginx: 访问服务器
+  Linux->>+Nginx: 安装了nginx
+  Linux->>+PHP: 安装了PHP
+  Linux->>+Store: 安装了redis,memcache
+  Nginx-->>-PHP: 把请求转发给PHP处理
+  PHP->>+Store: 读取数据
+  Store->>+PHP: 响应数据
+  PHP->>+Nginx: 响应处理的结果
+  Nginx->>+Chrome: 响应给浏览器
+```
 
 ## 学习任务
 
