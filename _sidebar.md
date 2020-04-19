@@ -9,6 +9,7 @@
   - [文件共享](linux2/samba.md)
   - [免密登录](linux2/no-password.md)
   - [软件Nginx](linux2/soft-nginx.md)
+  - [软件Supervisord](linux2/soft-supervisord.md)
 - 编程思想
   - [面向对象](mind/oop.md)
   - [设计模式](mind/design-pattern.md)
@@ -33,6 +34,9 @@
 - 工作
   - [GitLab](work/gitlab.md)
   - [Git-Runner](work/git-runner.md)
+- 工具
+  - [Git](tool/git.md)
+  - [fish](tool/fish.md)
 - 旧日记
   - [RabbitMQ](linux/centos_instal_rabbitmq.md)
   - [OpenVpn](linux/centos_openvpn.md)
