@@ -1,10 +1,14 @@
-# 使用跳板机映射内网服务到外网使用
+## 概述
+
+有时候需要调试链接远程服务器上的数据库，缓存等服务，但是由于远程服务器的限制，这些服务被限制在本地连接。所以需要使用跳板机进行连接
 
 ## 资源准备
 
-- 跳板机一台(jumper_host, jumper_username, jumper_password)
+- 跳板机
+  - 跳板机能够连接目标服务器
+  - (jumper_host, jumper_username, jumper_password)
 - 服务一台(xx_host, xx_port)
-- 代码运行机器(可以使用ssh命令)
+- 本地项目机器(可以使用ssh命令)
 
 ## 示例命令
 ```bash

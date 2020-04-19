@@ -66,6 +66,24 @@ Ken Thompson 的 sh 是第一种 Unix Shell，Windows Explorer 是一个典型�
     -rwxr-xr-x 1 root root 62480 Aug 20  2019 /usr/bin/touch
     ```
 
-    
+
+## 远程登录脚本
+
+```shell
+#!/usr/bin/expect
+
+set user root
+set host 100.100.100.100
+set password 123456
+set dsn $user@$host
+set notice [format "$dsn's password"];
+set timeout 30
+spawn ssh $dsn
+expect "$notice"
+send "$password\r"
+interact
+```
+
+
 
 Update At : {docsify-updated}

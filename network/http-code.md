@@ -1,9 +1,9 @@
 
-# 1xx
+## 1xx
 
     (Informational) 信息性状态码，表示正在处理。
 
-# 2xx
+## 2xx
 
     (Success) 成功状态码，表示请求正常。
     
@@ -11,14 +11,14 @@
     204 No Content 该状态码表示服务器接收到的请求已经处理完毕，但是服务器不需要返回响应体。
     206 Partial Content 该状态码表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求。
 
-# 3xx
+## 3xx
 
     (Redirection) 重定向状态码，表示客户端需要进行附加操作。
     
     301 Moved Permanently 永久性重定向。
     302 Found 临时性重定向。
 
-# 4xx
+## 4xx
 
     (Client Error) 客户端错误状态码，表示服务器无法处理请求。
     
