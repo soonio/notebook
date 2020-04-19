@@ -50,7 +50,7 @@ default_authentication_plugin=mysql_native_password
 
 - 创建新用户用于使用
 
-  ```
+  ```sql
   // 创建用户
   CREATE USER 'developer'@'%' IDENTIFIED BY '123456';
   
