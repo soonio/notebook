@@ -47,14 +47,20 @@ default_authentication_plugin=mysql_native_password
 - 修改root账户只能本地登录
 
   ```sql
-  UPDATE `user` SET `Host`= '127.0.0.1' WHERE `User` = 'root' AND `Host` = '%'
-  
-  -- UPDATE `user` SET `Host`= '172.18.0.1' WHERE `User` = 'root' AND `Host` = '%'
+  UPDATE `user` SET `Host`= '127.0.0.1' WHERE `User` = 'root' AND `Host` = '%';
   
   flush privileges;
   ```
 
   > 我是基于docker安装的mysql，所以Host使用宿主机host 172.18.0.1
+
+- 快速创建新的数据库
+  ```sql
+  # 创建
+  CREATE DATABASE `dbname` CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_unicode_ci';
+  # 删除
+  DROP DATABASE `dbname`;
+  ```
 
 - 创建新用户用于使用
 
