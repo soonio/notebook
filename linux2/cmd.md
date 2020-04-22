@@ -178,6 +178,7 @@
   12017 www       20   0  252452  27756   5380 S   3.0  0.2   2:28.27 php-fpm 
   21847 polkitd   20   0 2656416 513856  13500 S   1.0  3.3 772:09.35 mysqld        
   ```
+  
 - free
   ```bash
   [root@demo ~]# free -h
@@ -185,12 +186,26 @@
   Mem:            15G        1.8G        3.0G        145M         10G         12G
   Swap:            0B          0B          0B
   ```
+  
 - df
   ```bash
   [root@demo ~]# df -h
   Filesystem      Size  Used Avail Use% Mounted on
   devtmpfs        7.5G     0  7.5G   0% /dev
   ```
+
+- netstat
+
+  ```bash
+  [root@demo web]# sudo netstat -antp | grep 22
+  tcp        0      0 0.0.0.0:22        0.0.0.0:*        LISTEN      967/sshd
+  tcp        0      0 172.17.0.4:22     x.x.x.x:51582    ESTABLISHED 18280/sshd: root [p 
+  tcp        0      0 172.17.0.4:22     q.q.q.q:7894     SYN_RECV    -
+  tcp        0      0 172.17.0.4:22     q.q.q.q:12291    SYN_RECV    -
+  tcp        0      0 172.17.0.4:22     q.q.q.q:51440    SYN_RECV    -
+  ```
+
+  
 
 ## 其他命令
 
