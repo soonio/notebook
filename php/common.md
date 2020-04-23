@@ -1,6 +1,6 @@
-# 记录一次使用easyWeChat的微信回调通知失败问题
+## easyWeChat的微信回调通知失败
 
-## 问题描述
+### 概述
 
 项目使用easyWeChat和easyswoole开发
 该项目的http请求通过nginx转发给easyswoole处理，这个过程easyWeChat无法通过组件Symfony\Component\HttpFoundation\ParameterBag获取微信通知请求的xml内容
@@ -40,10 +40,10 @@ easyWeChat获取xml的方法
 ```
 $this->app['request']为Symfony\Component\HttpFoundation\ParameterBag的实例
 
-## 解决思路
+### 解决思路
 替换掉$this->app['request']的实例
 
-## 实际解决代码
+### 实际解决代码
 
 ```php
 /**

@@ -19,9 +19,9 @@
   - [安装](php/install.md)
   - [扩展](php/ext.md)
   - [扩展/pdo](php/ext-pdo.md)
-  - [函数](php/function.md)
-  - [闭包](php/PHP匿名函数(闭包函数).md)
+  - [扩展/swoole](php/ext-swoole.md)
   - [常见问题](php/PHP常见问题.md)
+  - [异常及解决](php/common.md)
 - Docker
   - [安装](docker/install.md)
   - [辅助工具](docker/lazydocker.md)

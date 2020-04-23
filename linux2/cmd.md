@@ -236,6 +236,14 @@ fi
 
 又是[菜鸟教程](https://www.runoob.com/linux/linux-command-manual.html)
 
+## 命令应用
+
+- 查找进程并关闭
+
+```bash
+ps -ef | grep a.php | grep -v grep | awk '{print $2}' | awk 'NR==1' | xargs kill -9
+```
+
 
 
 Update At : {docsify-updated}

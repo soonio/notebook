@@ -1,4 +1,13 @@
-# swoole动态proces管理样例
+## 安装
+
+参考[扩展模块](php/ext?id=源码安装)
+
+## 官方文档
+
+[swoole官方文档](https://wiki.swoole.com/)
+
+## swoole动态proces管理样例
+
 ```php
 <?php
 
