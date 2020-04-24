@@ -27,6 +27,7 @@
       mergeNavbar: true,
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
       auto2top: true,
+      search: 'auto', // 默认值
       plugins: [
         function(hook, vm) {
           hook.ready(function () {
@@ -60,5 +61,6 @@
   <script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-docker.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 </html>
