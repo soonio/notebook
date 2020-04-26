@@ -244,6 +244,23 @@ fi
 ps -ef | grep a.php | grep -v grep | awk '{print $2}' | awk 'NR==1' | xargs kill -9
 ```
 
+- 分配swap空间
+
+```bash
+[root@demo ~]# free -h
+              total        used        free      shared  buff/cache   available
+Mem:          1.8Gi       871Mi       444Mi        41Mi       514Mi       760Mi
+Swap:            0B          0B          0B
+[root@demo ~]# dd if=/dev/zero of=/swapfile bs=1k count=2048000
+[root@demo ~]# mkswap /swapfile
+[root@demo ~]# swapon /swapfile
+[root@demo ~]# echo "/swapfile swap swap defaults 0 0" >> fstab 
+[root@demo ~]# free -h
+              total        used        free      shared  buff/cache   available
+Mem:          1.8Gi       874Mi       208Mi        41Mi       746Mi       749Mi
+Swap:         2.0Gi       0.0Ki       2.0Gi
+```
+
 
 
 Update At : {docsify-updated}
