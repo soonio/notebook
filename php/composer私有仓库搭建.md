@@ -151,6 +151,14 @@
     }]
     ```
 
+    !> 注意，上文使用的是基于http的私有库，需要添加composer配置
+
+    ```json
+    "config": {
+        "secure-http": false
+    }
+    ```
+
   - composer 安装
 
     ```bash
