@@ -170,6 +170,69 @@ yum install -y nginx
   }
   ```
 
-  
+
+## 多服务共享单个域名
+
+- 测试环境搭建
+
+  - 修改本地hosts文件
+
+    ```tex
+    127.0.0.1 lo.p.com
+    ```
+
+  - 创建测试文件
+
+    ```bash
+    mkdir -P /Users/qingliu/temp/statis/s1
+    mkdir -P /Users/qingliu/temp/statis/s2
+    
+    # 下面两个文件要想显示正常需要替换正常的文件
+    touch /Users/qingliu/temp/statis/s1/a.jpg
+    touch /Users/qingliu/temp/statis/s2/b.png
+    ```
+
+  - 创建服务文件
+
+    ```php
+    echo "<?php print_r($_SERVER);" /Users/qingliu/temp/server.php
+    php -S 127.0.0.1:8080 server.php
+    php -S 127.0.0.1:8081 server.php
+    ```
+
+  - 创建nginx配置文件
+
+    ```nginx
+    server {
+      listen      80;
+      server_name lo.p.com;
+    
+      # 把所有项目的静态资源软连接到同一个目录中，使用不同的前缀分开
+      location \.(jpg|png)$ {
+        root /Users/qingliu/temp/statis;
+        expires  30d;
+      }
+    
+      # 把所有/s1/的请求转发到8080服务中
+      location /s1/ {
+        proxy_pass http://127.0.0.1:8080/;
+      }
+    
+      # 把所有/s2/的请求转发到8081服务中
+      location /s2/ {
+          proxy_pass http://127.0.0.1:8081/;
+        }
+    }
+    ```
+
+- 重启nginx服务查看效果
+
+  http://lo.p.com/s1/ 查看s1服务效果
+
+  http://lo.p.com/s2/ 查看s2服务效果
+
+  http://lo.p.com/s1/a.jpg 查看s1项目的资源
+
+  http://lo.p.com/s2/b.png 查看s2项目的资源
 
 Update At : {docsify-updated}
