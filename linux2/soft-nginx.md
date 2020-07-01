@@ -184,8 +184,8 @@ yum install -y nginx
   - 创建测试文件
 
     ```bash
-    mkdir -P /Users/qingliu/temp/statis/s1
-    mkdir -P /Users/qingliu/temp/statis/s2
+    mkdir -p /Users/qingliu/temp/statis/s1
+    mkdir -p /Users/qingliu/temp/statis/s2
     
     # 下面两个文件要想显示正常需要替换正常的文件
     touch /Users/qingliu/temp/statis/s1/a.jpg
@@ -195,9 +195,9 @@ yum install -y nginx
   - 创建服务文件
 
     ```php
-    echo "<?php print_r($_SERVER);" /Users/qingliu/temp/server.php
-    php -S 127.0.0.1:8080 server.php
-    php -S 127.0.0.1:8081 server.php
+    echo "<?php print_r(\$_SERVER);" > /Users/qingliu/temp/server.php
+    php -S 127.0.0.1:8080 /Users/qingliu/temp/server.php
+    php -S 127.0.0.1:8081 /Users/qingliu/temp/server.php
     ```
 
   - 创建nginx配置文件
