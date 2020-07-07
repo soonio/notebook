@@ -71,29 +71,26 @@
   # ---------- 编译时所用参数 ----------
   # 默认 Asia/Shanghai
   ARG timezone
-  # 默认 prod
-  ARG appenv
   
-  ENV TIMEZONE=${timezone:-"Asia/Shanghai"} \
-      APP_ENV=${appenv:-"prod"}
+  ENV TIMEZONE=${timezone:-"Asia/Shanghai"}
   
   RUN set -ex \
       && sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
       && apk update \
-      && apk add openssh rsync \
+      && apk add openssh rsync python \
       && ln -sf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
       && echo "${TIMEZONE}" > /etc/timezone \
       # ---------- clear works ----------
       && npm config set registry https://registry.npm.taobao.org \
-      && npm install node-sass \
+      && npm install -g node-sass --unsafe-perm=true --allow-root \
       && rm -rf /var/cache/apk/* /tmp/* /usr/share/man \
       && echo -e "\033[42;37m Build Completed :).\033[0m\n"
   
   WORKDIR /home
   ```
-
+  
   > Dockerfile 同级目录需要有ssh文件夹
-
+  
 - 创建免密登录条件
 
   - 构建临时用的容器上(tmp image)
