@@ -50,6 +50,9 @@ dnf remove -y gitlab-ce
   `vim /etc/gitlab/gitlab-secrets.json`
 
 ```ruby
+gitlab_rails['gitlab_shell_ssh_port'] = 22
+gitlab_rails['gitlab_shell_git_timeout'] = 800
+
 # 设置域名
 external_url "https://gitlab.guyinmedia.com"
 
