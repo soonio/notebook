@@ -171,7 +171,41 @@ gitlab-ctl restart nginx
 ```
 
 ```
+## 备份
+```
+gitlab-rake gitlab:backup:create
+```
 
+## 恢复备份
+备份文件
+
+/var/opt/gitlab/backups/1556615134_2019_04_30_9.5.0_gitlab_backup.tar
+
+```
+cd /var/opt/gitlab/backups
+gitlab-rake gitlab:backup:restore BACKUP=1556615134_2019_04_30_9.5.0
+```
+> 不需要写文件名后面的部分
+
+## gitlab升级
+
+[gitlab官网查找对应的版本](https://packages.gitlab.com/gitlab/gitlab-ce)
+或者[在清华大学镜像](https://mirror.tuna.tsinghua.edu.cn/gitlab-ce/yum/)里查找
+
+最后使用清华的gitlab镜像
+https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/ + 系统 + rpm
+
+```bash
+wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el6/gitlab-ce-10.8.4-ce.0.el6.x86_64.rpm
+
+gitlab-ctl stop
+
+yum install -y policycoreutils-python
+
+rpm -Uvh gitlab-ce-10.8.4-ce.0.el6.x86_64.rpm
+
+gitlab-ctl reconfigure
+```
 
 
 

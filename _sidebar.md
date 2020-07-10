@@ -25,7 +25,7 @@
   - [Composer私有库](php/composer私有仓库搭建.md)
 - Docker
   - [安装](docker/install.md)
-  - [辅助工具](docker/lazydocker.md)
+  - [辅助工具](docker/tools.md)
   - [常用命令](docker/cmd.md)
   - [日志管理](docker/log.md)
   - [网络管理](docker/network.md)

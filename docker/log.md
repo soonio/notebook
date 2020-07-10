@@ -1,4 +1,21 @@
-## 查询
+
+
+## 配置
+
+```json
+# /etc/docker/daemon.json
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "7" 
+  }
+}
+```
+
+[配置参考地址](https://docs.docker.com/config/containers/logging/json-file/)
+
+## 查询bash
 
 ```bash
 #!/bin/sh
@@ -12,7 +29,7 @@ for log in $logs
 ```
 
 
-## 删除
+## 删除bash
 ```bash
 
 #!/bin/sh
