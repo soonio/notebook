@@ -68,16 +68,16 @@ letsencrypt['auto_renew_day_of_month'] = "*/7"
 
 # 邮箱设置
 gitlab_rails['gitlab_email_enabled'] = true
-gitlab_rails['gitlab_email_from'] = 'notice@guyin.onaliyun.com'
-gitlab_rails['gitlab_email_display_name'] = '谷音&乐店GITLAB'
-gitlab_rails['gitlab_email_reply_to'] = 'notice@guyin.onaliyun.com'
+gitlab_rails['gitlab_email_from'] = 'xxxx@qqq.com'
+gitlab_rails['gitlab_email_display_name'] = 'gitlab服务'
+gitlab_rails['gitlab_email_reply_to'] = 'xxxx@qqq.com'
 
 # 发邮件设置
 gitlab_rails['smtp_enable'] = true
 gitlab_rails['smtp_address'] = "smtp.mxhichina.com"
 gitlab_rails['smtp_port'] = 465
-gitlab_rails['smtp_user_name'] = "notice@guyin.onaliyun.com"
-gitlab_rails['smtp_password'] = "Gy2019.mail!co"
+gitlab_rails['smtp_user_name'] = "xxxx@qqq.com"
+gitlab_rails['smtp_password'] = "123456"
 gitlab_rails['smtp_domain'] = "smtp.mxhichina.com"
 gitlab_rails['smtp_authentication'] = "login"
 gitlab_rails['smtp_enable_starttls_auto'] = true

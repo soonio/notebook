@@ -38,6 +38,9 @@ skip-host-cache
 skip-name-resolve
 
 default_authentication_plugin=mysql_native_password
+
+# 设置时区为东8区，不然在数据查询的时候会可能会匹配不上
+default-time_zone='+8:00'
 ```
 
 
