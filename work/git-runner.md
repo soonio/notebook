@@ -24,10 +24,10 @@
   docker restart gr1
   ```
 
-  > 重点在最后一句`pull_policy="if-not-present"`,可以使用本地镜像
+  > 重点在最后一句`pull_policy="if-not-present"`,可以使用本地镜像；修改concurrent的数量，可以提高并发数量
 
   ```toml
-    concurrent = 1
+    concurrent = 3
     check_interval = 0
 
     [session_server]
