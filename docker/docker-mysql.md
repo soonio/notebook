@@ -22,7 +22,7 @@ docker run \
     --privileged=true \
     --restart unless-stopped \
     --name mysql \
-    -d mysql:8.0.16
+    -d mysql:8.0.18 --default-authentication-plugin=mysql_native_password
 ```
 > mysql如果指定版本或者lasted的话，会导致wine中的navicat客户端无法链接的问题，暂不知道原因
 
