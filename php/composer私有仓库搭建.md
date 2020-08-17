@@ -10,10 +10,10 @@
 
 ## 环境构建
 
-- 以下操作都在宿主机的`/home/pks`下进行
+- 以下操作都在宿主机的`/data/www/satis`下进行,所先创建目录，并切入进去
 
   ```bash
-  mkdir /home/pks
+  mkdir -p /data/www/satis && cd /data/www/satis
   ```
 
 - 拉取镜像
@@ -25,24 +25,25 @@
 - 下载composer命令
 
   ```bash
-  wget -P /home/pks https://getcomposer.org/download/1.10.6/composer.phar \
+  cd /data/www/satis \
+  && wget https://getcomposer.org/download/1.10.6/composer.phar \
   && mv composer.phar composer \
   && chmod u+x composer
   ```
 
   > 也可以从gitlab下载安装,手动放到指定位置
 
-- 创建配置文件`touch /home/satis.json`
+- 创建配置文件`touch /data/www/satis/satis.json`
 
   ```json
   {
     "name": "io/soon",
     "homepage": "http://pks.iosoon.cn",
     "repositories": [
-      { "type": "vcs", "url": "https://github.com/ruoge3s/silk-interface" }
+      { "type": "vcs", "url": "https://gitee.com/soonio/pks" }
     ],
     "require": {
-      "ruoge3s/silk-interface": "*"
+      "soonio/pks": "*"
     }
   }
   ```
@@ -52,19 +53,19 @@
   - repositories 私有仓库的版本管理工具
   - require 私有仓库对应的包名
 
-- 创建对应的授权文件`mkdit /home/pks/composer && touch /home/pks/composer/auth.json`
+- 创建对应的授权文件`touch /data/www/satis/auth.json`
 
   ```json
   {
       "github-oauth": {
-          "github.com": "ed34668322f4f2c42f5a353ecedb8c4d49882262"
+          "github.com": "ed34668322f4f2c42f5a353ecedb8c4d49882262一个测试的密钥"
       }
   }
   ```
 
-  > 上面的gi thub.com的值，是从github中获取的token
+  > 上面的github.com的值，是从github中获取的token
   >
-  > 也可以省略该步骤，在运行容器的时候手动天蝎Token
+  > 也可以省略该步骤，在运行容器的时候手动填写Token
 
   
 
@@ -72,13 +73,14 @@
 
   - 运行容器
 
-  ```bash
-  docker run --rm --init -it \
-    --user $(id -u):$(id -g) \
-    -v /home/pks:/build/ \
-    -v /home/pks/composer:/composer \
-    composer/satis build /build/satis.json /build/pks.iosoon.cn
-  ```
+    ```bash
+    # 其中composer是缓存目录，也可以不映射，不保留缓存
+    docker run --rm --init -it \
+      --user $(id -u):$(id -g) \
+      -v /data/www/satis:/build/ \
+      -v /data/www/satis/composer:/composer \
+      composer/satis build /build/satis.json /build/dist
+    ```
 
   > 如果运行失败就多尝试几次，有时候github会抽风，拒绝链接
 
@@ -99,13 +101,14 @@
   ```nginx
   server {
       listen 80;
+      listen 81;
       server_name pks.iosoon.cn;
   
       access_log  /var/log/nginx/pks.iosoon.cn.log;
-      root  /home/pks/pks.iosoon.cn;
+      root  /data/www/satis/dist;
       index index.html;
     
-      auth_basic  "please entey yours username and password"; 
+      auth_basic  "please entey yours username and password."; 
       auth_basic_user_file /etc/nginx/conf.d/httppwd;
    
       location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
@@ -119,14 +122,13 @@
       }
   }
   ```
-
-  > 文中`/etc/nginx/conf.d/httppwd` 可以使用命令生成
-  >
-  > `yum install httpd-tools -y && htpasswd -c -d `/etc/nginx/conf.d/httppwd` username`
-  >
-  > 需要手动生成输入密码,username和密码在直接访问pks.iosoon.cn或者composer require私有库的时候使用
-
   
+
+  > 文中`/etc/nginx/conf.d/httppwd` 可以使用命令生成  
+  `yum install httpd-tools -y && htpasswd -c -d /etc/nginx/conf.d/httppwd username`  
+  需要手动生成输入密码,username和密码在直接访问pks.iosoon.cn或者composer require私有库的时候使用  
+
+
 ## Composer 引入私有库
 
   - 在与composer.json同级目录下新增auth.json
@@ -141,6 +143,7 @@
         }
     }
     ```
+```
 
   - composer.json中增加
 
@@ -149,7 +152,7 @@
       "type": "composer",
       "url": "http://pks.iosoon.cn"
     }]
-    ```
+```
 
     !> 注意，上文使用的是基于http的私有库，需要添加composer配置
 
@@ -162,7 +165,7 @@
   - composer 安装
 
     ```bash
-    composer reuiqre ruoge3s/silk-interface
+    composer require soonio/pks
     ```
 
     

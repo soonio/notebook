@@ -10,6 +10,7 @@
   - [免密登录](linux2/no-password.md)
   - [软件Nginx](linux2/soft-nginx.md)
   - [软件Supervisord](linux2/soft-supervisord.md)
+  - [命令用法实例](./linux2/usages.md)
 - 编程思想
   - [面向对象](mind/oop.md)
   - [设计模式](mind/design-pattern.md)
