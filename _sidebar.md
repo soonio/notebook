@@ -34,6 +34,7 @@
   - [实践[Redis]](docker/docker-redis.md)
   - [实践[Gitlab]](docker/docker-gitlab.md)
   - [容器化测试环境构建](docker/test.md)
+  - [ApacheBench](docker/abtest.md)
 - 工作
   - [GitLab](work/gitlab.md)
   - [Git-Runner](work/git-runner.md)
