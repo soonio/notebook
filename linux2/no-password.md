@@ -39,13 +39,13 @@ ssh-keygen -C "goodman@qq.com" -f ./filenane
 
 ### 上传公钥到服务器
 
-```
+```bash
 ssh-copy-id -i ~/filenane.pub root@192.168.1.110
 ```
 
 ## 使用私钥登录服务器
 
-```
+```bash
 ssh -i ~/filenane root@192.168.1.110
 ```
 
