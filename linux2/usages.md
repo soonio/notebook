@@ -16,3 +16,13 @@ docker run -it --rm redis redis-cli -h 192.168.1.9 -a 12345 -n 6 keys xxx* > a.t
 docker run -it --rm redis5 redis-cli -h 192.168.1.9 -a 12345 -n 0 -p 6379 EVAL "local keys = redis.call('keys', ARGV[1]) for i=1,#keys,5000 do redis.call('del', unpack(keys, i, math.min(i+4999, #keys))) end return #keys" 0 s:*
 ```
 
+
+
+
+
+生成密码
+
+```bash
+date +%s | sha256sum |base64 |head -c 16 ;echo
+```
+
