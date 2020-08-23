@@ -8,7 +8,7 @@
 
 ## 提前配置好域名解析
 
-> gitlab.guyinmedia.com  ->A-> 192.168.1.110
+> gitlab.domain.com  ->A-> 192.168.1.110
 
 
 
@@ -24,7 +24,7 @@ sudo systemctl start postfix
 # 官方教程安装，默认安装最新版本的
 # 官网默认使用的是gitlab-ee,需要改为gitlab-ce(社区版)
 curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
-sudo EXTERNAL_URL="https://gitlab.guyinmedia.com" dnf install -y gitlab-ce:
+sudo EXTERNAL_URL="https://gitlab.domain.com" dnf install -y gitlab-ce:
 
 # 手动安装指定版本(有时候官方源快，有时候清华大学源快)
 ## 清华大学源
@@ -54,7 +54,7 @@ gitlab_rails['gitlab_shell_ssh_port'] = 22
 gitlab_rails['gitlab_shell_git_timeout'] = 800
 
 # 设置域名
-external_url "https://gitlab.guyinmedia.com"
+external_url "https://gitlab.domain.com"
 
 # 使用lets encrypt生成免费证书
 letsencrypt['enable'] = true
