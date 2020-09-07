@@ -40,7 +40,7 @@
     "name": "io/soon",
     "homepage": "http://pks.iosoon.cn",
     "repositories": [
-      { "type": "vcs", "url": "https://gitee.com/soonio/pks" }
+      { "type": "vcs", "url": "https://username:password@gitee.com/soonio/pks" }
     ],
     "require": {
       "soonio/pks": "*"
@@ -66,7 +66,9 @@
   > 上面的github.com的值，是从github中获取的token
   >
   > 也可以省略该步骤，在运行容器的时候手动填写Token
-
+>
+  > github可以使用auth配置认证gitee不行，需要使用账户密码模式才能无交互的下拉带啊吗
+  
   
 
 ## 生成网站
@@ -155,7 +157,7 @@
 ```
 
     !> 注意，上文使用的是基于http的私有库，需要添加composer配置
-
+    
     ```json
     "config": {
         "secure-http": false
