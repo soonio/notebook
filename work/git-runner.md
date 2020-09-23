@@ -16,9 +16,15 @@
   docker exec -it gr1 gitlab-ci-multi-runner register
   ```
 
-  
+- 使用宿主机安装
 
-- 使用本地镜像
+  ```bash
+  yum install -y gitlab-runner
+  # 下面注册的时候使用宿主机的用户，避免权限不够用
+  gitlab-runner install --working-directory /home/gitlab-runner --user root
+  ```
+
+- 容器执行器-使用本地镜像
   ```bash
   vim /data/gitlab-runner/gr1/config/config.toml
   docker restart gr1
@@ -55,6 +61,7 @@
   ```
 
 - 在gitlab中检查runner是否已经正常链接
+
 - 在gitlab中给runner关联项目
 
 ## runner应用
