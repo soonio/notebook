@@ -1,26 +1,21 @@
-# 清流的烂笔头呀
+# 清流的小本本
 
 > Just for recoding some important and funny things!
 
-本人作为一名PHP开发者，经常需要使用linux操作系统，并在linux操作系统上安装各类软件。同时通过配置各类软件，配合工作，完成公司的开发相关的任务。所以在此记录下本人在工作中，生活中掌握的，学到的一些知识，以及一些思考总结、解决问题的方法。
+作为一名软件开发工程师，我还能为这个世界再做一点贡献.
 
-## 路线图
+## 想学习的东西
 
-[Linux](/linux2/system), [编程思想](/mind/oop), [Redis缓存](/redis2/usage)，[Docker容器](/docker/install)，[工作工具方法](/work/gitlab)，[网络编程](/network/http-code), 微服务，SaaS服务，ELK
-
-## Web编程
-```mermaid
-sequenceDiagram
-  Linux->>+Nginx: 安装了nginx
-  Linux->>+PHP: 安装了PHP
-  Linux->>+Store: 安装了redis,memcache
-  Chrome->>Nginx: 访问服务器
-  Nginx-->>-PHP: 把请求转发给PHP处理
-  PHP->>+Store: 读取数据
-  Store->>+PHP: 响应数据
-  PHP->>+Nginx: 响应处理的结果
-  Nginx->>+Chrome: 响应给浏览器
-```
+[基础知识](/base-knowledge/http.md)、
+[Linux](/linux/system.md)、
+[编程思想](/mind/oop.md)、
+[Redis缓存](/redis2/usage.md)、
+[Docker容器](/docker/install.md)、
+[工作工具方法](/work/gitlab.md)、
+网络编程、
+微服务、
+SaaS服务、
+ELK
 
 ## 学习任务
 
@@ -31,7 +26,6 @@ sequenceDiagram
   - [ ] PHP
   - [ ] Python
   - [ ] Js
-  - [ ] Dart
   - [ ] GoLang
 - [ ] 编程思想
   - [ ] 面向对象
@@ -47,10 +41,15 @@ sequenceDiagram
 - [ ] ELK应用
 - [ ] 小型企业内网服务搭建
 - [ ] 基于PHP框架hyperf的saas系统实现
-- [ ] 其他
 
 ## 致谢
 
  本文档Power by [docsify](https://docsify.js.org/), 相关使用方式参考[官方文档](https://docsify.js.org/#/quickstart)
+
+## 文档预览
+
+```bash
+docsify serve .
+```
 
 Update At : {docsify-updated}

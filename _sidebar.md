@@ -1,16 +1,18 @@
+- 基础知识
+  - [HTTP](base-knowledge/http.md)
 - Linux
-  - [操作系统](linux2/system.md)
-  - [常用命令](linux2/cmd.md)
-  - [Shell](linux2/shell.md)
-  - [基础软件](linux2/soft.md)
-  - [软件安装](linux2/install.md)
-  - [计划任务](linux2/crontab.md)
-  - [进程管理](linux2/process.md)
-  - [文件共享](linux2/samba.md)
-  - [免密登录](linux2/no-password.md)
-  - [软件Nginx](linux2/soft-nginx.md)
-  - [软件Supervisord](linux2/soft-supervisord.md)
-  - [命令用法实例](./linux2/usages.md)
+  - [操作系统](linux/system.md)
+  - [常用命令](linux/cmd.md)
+  - [Shell](linux/shell.md)
+  - [基础软件](linux/soft.md)
+  - [软件安装](linux/install.md)
+  - [计划任务](linux/crontab.md)
+  - [进程管理](linux/process.md)
+  - [文件共享](linux/samba.md)
+  - [免密登录](linux/no-password.md)
+  - [软件Nginx](linux/soft-nginx.md)
+  - [软件Supervisord](linux/soft-supervisord.md)
+  - [命令用法实例](linux/usages.md)
 - 编程思想
   - [面向对象](mind/oop.md)
   - [设计模式](mind/design-pattern.md)
@@ -36,6 +38,7 @@
   - [容器化测试环境构建](docker/test.md)
   - [ApacheBench](docker/abtest.md)
 - 工作
+  - [内网服务构建](work/insider-service-build.md)
   - [GitLab](work/gitlab.md)
   - [Git-Runner](work/git-runner.md)
   - [跳板机应用](work/jumper.md)
@@ -44,7 +47,7 @@
   - [Git](tool/git.md)
   - [fish](tool/fish.md)
 - 网络
-  - [Http状态码](network/http-code.md)
+  - [Http状态码](base-knowledge/http-code.md)
 - Deepin
   - [自定义桌面图标](deepin/创建桌面图标.md)
 
