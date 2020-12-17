@@ -48,6 +48,21 @@ curl www.baidu.com
 
 ## rsync 同步文件
 
+```bash
+rsync -rzvt
+      $(pwd)/ 192.168.1.111:/data/web/union
+      --delete
+      --exclude="composer.lock"
+      --exclude=".git"
+      --exclude="runtime"
+      --exclude="storage/upload"
+      --exclude="vendor"
+```
+> rsync是一款支持增量同步的工具，上面命令是在做代码发布时使用的命令。  
+> 通过`man rsync`可以看到-rzvt 分别意思为递归目录/压缩/显示同步信息/保留文件的时间信息  
+> `--delete` 删除远程服务器中`$(pwd)`中没有的文件  
+> `--exclude` 保留这些`$(pwd)`中没有的文件
+
 
 
 Update At : {docsify-updated}

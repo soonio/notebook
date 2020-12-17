@@ -26,6 +26,7 @@
   - [常见问题](php/PHP常见问题.md)
   - [异常及解决](php/common.md)
   - [Composer私有库](php/composer私有仓库搭建.md)
+  - [PSR](php/psr.md)
 - Docker
   - [安装](docker/install.md)
   - [辅助工具](docker/tools.md)
