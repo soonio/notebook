@@ -235,4 +235,61 @@ yum install -y nginx
 
   http://lo.p.com/s2/b.png 查看s2项目的资源
 
+## Nginx解析到docker中的php-fpm
+
+```shell
+server{
+    listen  80 ;
+    server_name     order.test.com;
+    rewrite ^(.*)$ https://$host$1 permanent;
+ }
+server {
+    listen       443 ssl;
+    server_name  order.test.com;
+
+    #charset koi8-r;
+    access_log  /var/log/nginx/order.test.com.log main;
+    error_log /var/log/nginx/order.test.com.error.log error;
+
+    root    /Users/qingliu/workspace/cloud/order/Web;
+    index   index.html index.htm index.php;
+
+    ssl_certificate     order.test.com.pem;
+    ssl_certificate_key order.test.com.key;
+    ssl_session_timeout 5m;
+    ssl_ciphers         ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+
+    location / {
+        if (!-e $request_filename) {
+            rewrite  ^/(.*)$  /index.php/$1  last;
+            break;
+        }
+    }
+
+    location ~ \.php {
+        root /opt/order/Web;
+        include fastcgi_params;
+        fastcgi_split_path_info ^(.+\.php)(.*)$;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_pass  127.0.0.1:9080;
+        fastcgi_index index.php;
+    }
+
+    location ^~ /ws/ {
+        proxy_pass http://127.0.0.1:9501;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location ~ /\.(ht|svn|git) {
+        deny all;
+    }
+}
+
+```
+
 Update At : {docsify-updated}
