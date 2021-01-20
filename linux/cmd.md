@@ -244,6 +244,11 @@ fi
 ps -ef | grep a.php | grep -v grep | awk '{print $2}' | awk 'NR==1' | xargs kill -9
 ```
 
+- 删除七天之前的gitlab备份 
+```bash
+rm -rf `date -d '7 day ago' "+%Y_%m_%d" | xargs -i echo '/data/backup/*'{}'*.tar'`
+```
+
 - 分配swap空间
 
 ```bash
