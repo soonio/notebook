@@ -266,6 +266,11 @@ Mem:          1.8Gi       874Mi       208Mi        41Mi       746Mi       749Mi
 Swap:         2.0Gi       0.0Ki       2.0Gi
 ```
 
+- 后台任务
+```shell
+php -S 192.168.1.5:8089 bin/serve/preview.php > runtime/seer.log 2>&1 &
+```
+
 
 
 Update At : {docsify-updated}
