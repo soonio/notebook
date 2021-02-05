@@ -18,7 +18,7 @@ yum update -y \
 
 curl -SL "https://github.com/kkos/oniguruma/archive/v6.9.4.tar.gz"  -o oniguruma694.tar.gz \
 && mkdir -p oniguruma694 \
-&& tar -xf /root/oniguruma694.tar.gz \
+&& tar -xf /root/oniguruma694.tar.gz -C oniguruma694 --strip-components=1 \
 && ( \
   cd oniguruma694 \
   && ./autogen.sh \
