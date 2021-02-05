@@ -51,4 +51,5 @@
   - [Http状态码](base-knowledge/http-code.md)
 - Deepin
   - [自定义桌面图标](deepin/创建桌面图标.md)
-
+- 一键系列
+  - [一键安装PHP8.x](once/php8.md)
