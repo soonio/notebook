@@ -19,7 +19,7 @@
   - 执行./configure 命令
 
     ```bash
-    ./configure --prefix=/usr/local/php72 --with-mysqli --with-pdo-mysql --with-jpeg-dir --with-png-dir  --with-iconv-dir --with-freetype-dir --with-zlib --with-libxml-dir --with-gd --with-openssl --with-mhash --with-curl --with-pear --with-fpm-user=nobody --with-fpm-group=nobody --enable-bcmath --enable-soap --enable-zip --enable-fpm --enable-mbstring --enable-sockets --enable-opcache --enable-pcntl --enable-simplexml --enable-xml --disable-fileinfo --disable-rpath 
+    ./configure --prefix=/usr/local/php72 --with-mysqli --with-pdo-mysql --with-jpeg-dir --with-png-dir  --with-iconv-dir --with-freetype-dir --with-zlib --with-libxml-dir --with-gd --with-openssl --with-mhash --with-curl --with-pear --with-fpm-user=nginx --with-fpm-group=nginx --enable-bcmath --enable-soap --enable-zip --enable-fpm --enable-mbstring --enable-sockets --enable-opcache --enable-pcntl --enable-simplexml --enable-xml 
     ```
     > --with-fpm-user=nobody --with-fpm-group=nobody 设置为www用户也可以
     
