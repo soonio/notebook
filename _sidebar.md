@@ -54,3 +54,4 @@
 - 一键系列
   - [一键安装PHP8.x](once/php8.md)
   - [一键搭建VPN](once/vpn.md)
+  - [一键搭建文件共享平台](once/filesbrowser.md)
