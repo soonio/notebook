@@ -1,7 +1,4 @@
-- 基础知识
-  - [HTTP](base-knowledge/http.md)
 - Linux
-  - [操作系统](linux/system.md)
   - [常用命令](linux/cmd.md)
   - [Shell](linux/shell.md)
   - [基础软件](linux/soft.md)
@@ -12,12 +9,9 @@
   - [免密登录](linux/no-password.md)
   - [软件Nginx](linux/soft-nginx.md)
   - [软件Supervisord](linux/soft-supervisord.md)
-  - [命令用法实例](linux/usages.md)
-- 编程思想
-  - [面向对象](mind/oop.md)
-  - [设计模式](mind/design-pattern.md)
-- Redis
-  - [用法](redis2/usage.md)
+- Storage
+  - [Mysql](storage/mysql.md)
+  - [Redis](storage/redis.md)
 - PHP
   - [安装](php/install.md)
   - [扩展](php/ext.md)
@@ -28,30 +22,26 @@
   - [Composer私有库](php/composer私有仓库搭建.md)
   - [PSR](php/psr.md)
 - Docker
-  - [安装](docker/install.md)
-  - [辅助工具](docker/tools.md)
+  - [安装及配置](docker/install.md)
   - [常用命令](docker/cmd.md)
-  - [日志管理](docker/log.md)
   - [网络管理](docker/network.md)
+  - [Docker应用](docker/usages.md)
   - [实践[Mysql]](docker/docker-mysql.md)
   - [实践[Redis]](docker/docker-redis.md)
   - [实践[Gitlab]](docker/docker-gitlab.md)
   - [容器化测试环境构建](docker/test.md)
-  - [ApacheBench](docker/abtest.md)
 - 工作
   - [内网服务构建](work/insider-service-build.md)
   - [GitLab](work/gitlab.md)
   - [Git-Runner](work/git-runner.md)
   - [跳板机应用](work/jumper.md)
   - [RabbitMQ](work/rabbitmq.md)
-- 工具
-  - [Git](tool/git.md)
-  - [fish](tool/fish.md)
-- 网络
-  - [Http状态码](base-knowledge/http-code.md)
-- Deepin
-  - [自定义桌面图标](deepin/创建桌面图标.md)
 - 一键系列
   - [一键安装PHP8.x](once/php8.md)
   - [一键搭建VPN](once/vpn.md)
   - [一键搭建文件共享平台](once/filesbrowser.md)
+- 其他
+  - [面向对象](other/oop.md)
+  - [设计模式](other/design-pattern.md)
+  - [HTTP](other/http.md)
+  - [Deepin自定义桌面图标](other/创建桌面图标.md)

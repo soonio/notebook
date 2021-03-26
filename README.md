@@ -6,10 +6,10 @@
 
 ## 想学习的东西
 
-[基础知识](/base-knowledge/http.md)、
+[基础知识](/other/http.md)、
 [Linux](/linux/system.md)、
-[编程思想](/mind/oop.md)、
-[Redis缓存](/redis2/usage.md)、
+[编程思想](/other/oop.md)、
+[Redis缓存](/storage/redis.md)、
 [Docker容器](/docker/install.md)、
 [工作工具方法](/work/gitlab.md)、
 网络编程、

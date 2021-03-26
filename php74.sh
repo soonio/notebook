@@ -1,5 +1,3 @@
-
-
 # 安装依赖
 yum update -y \
 && yum install -y \
