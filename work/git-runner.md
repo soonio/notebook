@@ -1,5 +1,7 @@
 ## runner安装
 
+- [官方文档](https://docs.gitlab.com/runner/install/linux-manually.html)
+
 - 使用docker安装
 
   ```bash
