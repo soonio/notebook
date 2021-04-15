@@ -52,5 +52,17 @@ php -v
 TODO
 
 
+## 配合composer
+
+  ```shell
+  # 下载
+  wget https://github.com/composer/composer/releases/download/2.0.12/composer.phar
+  wget https://getcomposer.org/download/2.0.12/composer.phar
+
+  # 放到用户bin目录
+  chmod u+x composer.phar && mv composer.phar /usr/local/bin/composer
+
+  ```
+
 
 Update At : {docsify-updated}
