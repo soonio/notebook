@@ -23,7 +23,7 @@ curl -SL "https://github.com/kkos/oniguruma/archive/v6.9.4.tar.gz"  -o oniguruma
   cd oniguruma694 \
   && ./autogen.sh \
   && ./configure --prefix=/usr \
-  && make -s -j$(nproc) \
+  && make \
   && make install \
 )
 
@@ -56,7 +56,7 @@ cd /root \
   --enable-xml \
   --disable-fileinfo \
   --disable-rpath \
-  && make -s -j$(nproc) \
+  && make \
   && make install \
   && /bin/cp -rf php.ini-production /etc/php/php.ini
 )
@@ -79,7 +79,7 @@ cd /root \
   cd redis \
   && phpize \
   && ./configure \
-  && make -s -j$(nproc) \
+  && make \
   && make install \
 ) \
 && echo "extension=redis.so" > /etc/php/conf.d/50_redis.ini \
