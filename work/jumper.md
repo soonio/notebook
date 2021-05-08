@@ -15,7 +15,7 @@
 ssh -N -f -L 6380:100.100.100.123:6379 root@200.200.200.200
 ```
 
-> ssh ssh -N -f -L local_port:redis_ip:redis_port jumper_user@jumper_ip  
+> ssh ssh -N -f -L local_port :redis_ip:redis_port jumper_user@jumper_ip  
 > 把本地端口通过跳板机(jumper)映射到服务机(redis，MySql等)  
 
 ## 运行状态查看
