@@ -117,7 +117,7 @@
   ```
   > 其中-B3 -A7 有oauths出现的前三行和后7行都读取出来
 
-  使用php解析褚oauth.sql中有效的数据
+  使用php解析出oauth.sql中有效的数据
   ```php
   # f.php
   date_default_timezone_set('Asia/Shanghai');
@@ -157,7 +157,7 @@
 ## 后来还发现参加活动的数据部分丢失
 
   ```bash
-  # 抓去所有的
+  # 抓取所有相关的sql
   grep -w activity_logs all.sql > al.sql
   
   # 发现al.sql中的sql没有结尾符号，通过sed命令给每条sql添加上`;`
