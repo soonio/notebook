@@ -36,7 +36,7 @@
   - [Git-Runner](work/git-runner.md)
   - [跳板机应用](work/jumper.md)
   - [RabbitMQ](work/rabbitmq.md)
-  - [删库跑路](work/recovery-mysql.md)
+  - [删库不跑路](work/recovery-mysql.md)
 - 一键系列
   - [一键安装PHP8.x](once/php8.md)
   - [一键搭建VPN](once/vpn.md)
