@@ -188,6 +188,42 @@
     
     ```
 
+## 一个生产环境的yml配置
+  ```yaml
+  stages:
+    - Product
+
+  before_script:
+    - go version
+    - gf version
+    - go mod download
+    - gf pack config,public packed/pack.go
+
+  Deploy:
+    stage: Product
+    when: manual
+    script:
+      - eval $(ssh-agent -s)
+      - mv config/config.prev.toml config/config.toml
+      - sed -i "s/VERSION_PLACEHOLDER/$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA/g" config/config.toml
+      - gf build main.go
+      - chmod 0600 $_global_pem
+      - ssh-add $_global_pem
+      - export REMOTE=root@27.27.27.27
+      - export WKDIR=/var/www/NB
+      - scp bin/linux_amd64/nb2 $REMOTE:$WKDIR/nb2.new
+      - ssh -p22 $REMOTE "ls -alh $WKDIR"
+      - ssh -p22 $REMOTE "supervisorctl stop nb-serve"
+      - ssh -p22 $REMOTE "mv $WKDIR/nb2.new $WKDIR/nb2"
+      - migrate -path database/migrations -database "mysql://nb2:password@tcp(28.28.28.28:3306)/nb2-prod" up
+      - ssh -p22 $REMOTE "supervisorctl start nb-serve"
+      - kill $SSH_AGENT_PID
+    only:
+      - develop
+    tags:
+      - go
+  ```
+
     
 
 
