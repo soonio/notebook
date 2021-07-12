@@ -26,7 +26,7 @@
   DROP USER developer @'%';
   
   // 给用户授权所有权限
-  GRANT ALL PRIVILEGES ON dbname.* TO 'developer' @'%' WITH GRANT OPTION;
+  GRANT ALL PRIVILEGES ON `dbname`.`*` TO 'developer'@'%' WITH GRANT OPTION;
   // 授权部分权限
   GRANT SELECT,
   	INSERT, UPDATE,
@@ -38,13 +38,13 @@
   	REFERENCES,
   	CREATE TEMPORARY TABLES,
   	LOCK TABLES,
-  	EXECUTE ON `converyor-test`.* TO 'developer' @'%' WITH GRANT OPTION;
+  	EXECUTE ON `dbname`.* TO 'developer'@'%' WITH GRANT OPTION;
   
   // 撤销用户的授权
-  REVOKE ALL PRIVILEGES ON *.* FROM 'developer' @'%';
+  REVOKE ALL PRIVILEGES ON `*`.`*` FROM 'developer'@'%';
   
   // 查看授权结果
-  SHOW GRANTS FOR 'developer' @'%';
+  SHOW GRANTS FOR 'developer'@'%';
   
   // 刷新权限
   flush privileges;
