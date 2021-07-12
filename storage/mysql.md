@@ -26,7 +26,7 @@
   DROP USER developer @'%';
   
   // 给用户授权所有权限
-  GRANT ALL PRIVILEGES ON `dbname`.`*` TO 'developer'@'%' WITH GRANT OPTION;
+  GRANT ALL PRIVILEGES ON `dbname`.* TO 'developer'@'%' WITH GRANT OPTION;
   // 授权部分权限
   GRANT SELECT,
   	INSERT, UPDATE,
@@ -41,7 +41,7 @@
   	EXECUTE ON `dbname`.* TO 'developer'@'%' WITH GRANT OPTION;
   
   // 撤销用户的授权
-  REVOKE ALL PRIVILEGES ON `*`.`*` FROM 'developer'@'%';
+  REVOKE ALL PRIVILEGES ON `*`.* FROM 'developer'@'%';
   
   // 查看授权结果
   SHOW GRANTS FOR 'developer'@'%';
