@@ -19,28 +19,27 @@ ELK
 
 ## 学习任务
 
-- [ ] Linux
-  - [ ] 常用命令
-  - [ ] 常用软件
-- [ ] 编程语言
-  - [ ] PHP
-  - [ ] Python
-  - [ ] Js
-  - [ ] GoLang
-- [ ] 编程思想
-  - [ ] 面向对象
-  - [ ] 设计模式及应用场景
-  - [ ] 框架设计
+- [x] Linux
+  - [x] 常用命令
+  - [x] 常用软件
+- [x] 编程语言
+  - [x] PHP
+  - [x] Python
+  - [x] Js
+  - [x] GoLang
+- [x] 编程思想
+  - [x] 面向对象
+  - [x] 设计模式及应用场景
+  - [x] 框架设计
 - [ ] 系统架构
   - [ ] 微服务
   - [ ] SaaS服务
-- [ ] Mysql应用及优化
-- [ ] Redis应用及优化
-- [ ] RabbitMq应用
+- [x] Mysql应用及优化
+- [x] Redis应用及优化
+- [x] RabbitMq应用
 - [ ] Elasticsearch应用
 - [ ] ELK应用
 - [ ] 小型企业内网服务搭建
-- [ ] 基于PHP框架hyperf的saas系统实现
 
 ## 致谢
 
