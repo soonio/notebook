@@ -21,6 +21,8 @@
   - [异常及解决](php/common.md)
   - [Composer私有库](php/composer私有仓库搭建.md)
   - [PSR](php/psr.md)
+  - [编码规范](php/standard-php7.md) 
+  - [PHP连续数字索引产生的问题](php/PHP连续数字索引产生的问题.md)
 - Docker
   - [安装及配置](docker/install.md)
   - [常用命令](docker/cmd.md)
@@ -32,15 +34,16 @@
   - [容器化测试环境构建](docker/test.md)
 - 工作
   - [内网服务构建](work/insider-service-build.md)
+  - [git-flow](work/gitflow.md)
   - [GitLab](work/gitlab.md)
   - [Git-Runner](work/git-runner.md)
   - [跳板机应用](work/jumper.md)
   - [RabbitMQ](work/rabbitmq.md)
   - [删库不跑路](work/recovery-mysql.md)
 - 一键系列
-  - [一键安装PHP8.x](once/php8.md)
-  - [一键搭建VPN](once/vpn.md)
-  - [一键搭建文件共享平台](once/filesbrowser.md)
+  - [PHP8.x](once/php8.md)
+  - [搭建VPN](once/vpn.md)
+  - [搭建文件共享平台](once/filesbrowser.md)
 - 其他
   - [面向对象](other/oop.md)
   - [设计模式](other/design-pattern.md)

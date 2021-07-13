@@ -1,4 +1,7 @@
-## 一键构建内网文件浏览共享
+
+### 需求说明
+
+  在公司内部，建立简单的文件共享平台，便于管理一些内部资料文件等需要归档的东西
 
 ### 安装
 ```shell
@@ -35,3 +38,7 @@ server {
     }
 }
 ```
+
+### 更多
+
+  [filebrowser](https://github.com/filebrowser/filebrowser)

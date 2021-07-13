@@ -1,4 +1,3 @@
-## Centos8一键安装PHP8.0
 
 ```shell
 yum update -y \
