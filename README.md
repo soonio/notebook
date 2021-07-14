@@ -7,7 +7,7 @@
 ## 想学习的东西
 
 [基础知识](/other/http.md)、
-[Linux](/linux/system.md)、
+[Linux](/linux/cmd.md)、
 [编程思想](/other/oop.md)、
 [Redis缓存](/storage/redis.md)、
 [Docker容器](/docker/install.md)、
