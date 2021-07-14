@@ -1,8 +1,8 @@
-## HTTP
+###  HTTP
 
 超文本传输协议(HyperText Transfer Protocol，缩写HTTP)
 
-## HTTP 状态码
+### HTTP 状态码
 
 - 1xx  (Informational) 信息性状态码，表示正在处理。
 
