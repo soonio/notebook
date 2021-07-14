@@ -1,4 +1,13 @@
 
+## 一键安装
+
+```shell
+curl -SL https://raw.githubusercontent.com/soonio/notebook/main/once/install-php8.sh -o iphp8.sh \
+&& chmod +x iphp8.sh \
+&& ./iphp8.sh
+```
+
+## 命令内容
 ```shell
 yum update -y \
 && yum install -y \
@@ -27,7 +36,7 @@ curl -SL "https://github.com/kkos/oniguruma/archive/v6.9.4.tar.gz"  -o oniguruma
 )
 
 cd /root \
-&& curl -SL "http://mirrors.sohu.com/php/php-8.0.1.tar.gz"  -o php80.tar.gz \
+&& curl -SL "http://mirrors.sohu.com/php/php-8.0.8.tar.gz"  -o php80.tar.gz \
 && mkdir -p php80 \
 && tar -xf /root/php80.tar.gz -C php80 --strip-components=1 \
 && ( \
