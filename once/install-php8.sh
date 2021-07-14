@@ -1,3 +1,5 @@
+echo -e "\033[32m🚀 start install.\033[0m"
+
 yum update -y \
 && yum install -y \
   gcc \
@@ -13,6 +15,8 @@ yum update -y \
   libmcrypt libmcrypt-devel \
   sqlite-devel
 
+echo -e "\033[32m🚀 install oniguruma .\033[0m"
+
 curl -SL "https://github.com/kkos/oniguruma/archive/v6.9.4.tar.gz"  -o oniguruma694.tar.gz \
 && mkdir -p oniguruma694 \
 && tar -xf /root/oniguruma694.tar.gz -C oniguruma694 --strip-components=1 \
@@ -24,15 +28,17 @@ curl -SL "https://github.com/kkos/oniguruma/archive/v6.9.4.tar.gz"  -o oniguruma
   && make install \
 )
 
+echo -e "\033[32m🚀 install php8 .\033[0m"
+
 cd /root \
-&& curl -SL "http://mirrors.sohu.com/php/php-8.0.8.tar.gz"  -o php80.tar.gz \
-&& mkdir -p php80 \
-&& tar -xf /root/php80.tar.gz -C php80 --strip-components=1 \
+&& curl -SL "http://mirrors.sohu.com/php/php-8.0.8.tar.gz"  -o php8.tar.gz \
+&& mkdir -p php8 \
+&& tar -xf /root/php8.tar.gz -C php8 --strip-components=1 \
 && ( \
-  cd php80 \
+  cd php8 \
   && mkdir -p "/etc/php/conf.d" \
   && ./configure \
-  --prefix=/usr/local/php80 \
+  --prefix=/usr/local/php8 \
   --with-config-file-path="/etc/php" \
   --with-config-file-scan-dir="/etc/php/conf.d" \
   --with-pdo-mysql \
@@ -58,14 +64,16 @@ cd /root \
 )
 
 # 设置php-fpm.conf
-cd "/usr/local/php80/etc" \
+cd "/usr/local/php8/etc" \
 && /bin/mv php-fpm.conf.default php-fpm.conf \
 && /bin/mv php-fpm.d/www.conf.default php-fpm.d/www.conf
 
 # 把PHP加入环境变量
-echo "PATH=\$PATH:/usr/local/php80/bin:/usr/local/php80/sbin" > /etc/profile.d/php.sh
+echo "PATH=\$PATH:/usr/local/php8/bin:/usr/local/php8/sbin" > /etc/profile.d/php.sh
 echo "export PATH" >> /etc/profile.d/php.sh
 source /etc/profile
+
+echo -e "\033[32m🚀 install php-ext-redis .\033[0m"
 
 cd /root \
 && curl -SL https://github.com/phpredis/phpredis/archive/5.3.2.tar.gz -o redis.tar.gz \
@@ -81,4 +89,4 @@ cd /root \
 && echo "extension=redis.so" > /etc/php/conf.d/50_redis.ini \
 && php --ri redis
 
-echo -e "\033[32m😂 mission completed.\033[0m"
+echo -e "\033[32m😁 mission completed.\033[0m"
