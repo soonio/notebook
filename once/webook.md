@@ -117,3 +117,20 @@ curl https://hook.iosoon.cn/hooks/www
 ```
 
 ## 基于supervisor的启动
+```ini
+[program:hook]
+directory=/home
+command=/usr/local/bin/webhook -ip 127.0.0.1 -port 9600 -hotreload -hooks /data/auto-deploy/config.json -verbose
+user=root
+autostart=true
+autorestart=true
+startsecs=2
+startretries=2
+stdout_logfile_maxbytes=1MB
+stderr_logfile=/var/log/supervisor/hook-stderr.log
+stdout_logfile=/var/log/supervisor/hook-stdout.log
+```
+
+## 其他
+
+  使用github的hook，最好使用ssh方式拉取代码
