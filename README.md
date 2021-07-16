@@ -1,8 +1,7 @@
 # 清流的小本本
 
-> Just for recoding some important and funny things!
+> 虚心向学。
 
-作为一名软件开发工程师，我还能为这个世界再做一点贡献.
 
 ## 想学习的东西
 
