@@ -1,12 +1,7 @@
-<svg
-        width="120"
-        height="120"
-        xmlns="http://www.w3.org/2000/svg"
->
-    <circle cx="60" cy="60" r="50" fill="white"/>
-
-    <path d="M 10,60 a50,50 0 0,0 50,50" fill="rgb(52, 168, 83)"/>
-    <path d="M 40,40 v-25 a50,50 0 0,0 -25,25 z" fill="rgb(66, 153, 244)" />
-    <path d="M 73.3,73.3 v35 a50,50 0 0,0 35,-35 z" fill="rgb(251, 188, 5)" />
-    <path d="M 60,60 h50 a50,50 0 0,0 -50,-50 z" fill="rgb(234, 67, 53)"/>
+<svg width="120px" height="120px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 60 15 A9,10 0 0 1 60 105" fill="none" stroke-width="15" stroke="rgb(66, 153, 244)" />
+    <path d="M 60 105 A9,10 0 0 1 60 15" fill="none" stroke-width="15" stroke="rgb(66, 153, 244)" />
+    <circle cx="90" cy="90" r="20" fill="rgb(251, 188, 5)"/>
+    <circle cx="90" cy="90" r="16" fill="rgb(234, 67, 53)"/>
+    <path d="M 90,78 88,98 94,98" fill="none" stroke-width="4" stroke="white" />
 </svg>
