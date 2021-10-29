@@ -150,7 +150,7 @@ class CodingStandard extends Standard implements Version // 继承及实现需�
      * 通过备注说明，相应的数组是student对象组成的
      * @return Student[] array
      */
-    public function getStudents()
+    public function getStudents(): array
     {
         return [
             new Student(),
@@ -165,10 +165,7 @@ class CodingStandard extends Standard implements Version // 继承及实现需�
     {
         echo 'The coding standard version is ' . $this->version(); // 点(.)前后各有一个空格，version和"()"之间无空格
 
-        /** @var Student[] $students */ // 该注释仅当getStudents未指明响应的数组中的对象类型时，可以通过在此处进行注释说明
-
         $students = $this->getStudents();
-
         foreach ($students as $student) {
             echo $student->id; // id需要student类中注明是可读的
         }

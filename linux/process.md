@@ -43,7 +43,3 @@
   ```
 
 - `top`、 `fg`、`bg`、`free -h`
-
-
-
-Update At : {docsify-updated}

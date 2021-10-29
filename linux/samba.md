@@ -92,4 +92,3 @@
     
     1.创建linux用户，而不设置密码，该用户将不能登陆服务器
     2.将linux用户加入smb用户并设置密码，用户可通过smb访问文件
-Update At : {docsify-updated}

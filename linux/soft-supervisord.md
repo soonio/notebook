@@ -90,5 +90,3 @@ systemctl enable supervisord.service
   # 可以看到在持续输出日期时间
   tail -f /var/log/supervisor/demo-stdout.log 
   ```
-
-Update At : {docsify-updated}

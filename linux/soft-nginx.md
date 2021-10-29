@@ -291,5 +291,3 @@ server {
 }
 
 ```
-
-Update At : {docsify-updated}

@@ -12,11 +12,10 @@
 - Storage
   - [Mysql](storage/mysql.md)
   - [Redis](storage/redis.md)
+- 常用软件安装
+  - [PHP72源码安装](install/php72.md) 
 - PHP
-  - [安装](php/install.md)
   - [扩展](php/ext.md)
-  - [扩展/pdo](php/ext-pdo.md)
-  - [扩展/swoole](php/ext-swoole.md)
   - [常见问题](php/PHP常见问题.md)
   - [异常及解决](php/common.md)
   - [Composer私有库](php/composer私有仓库搭建.md)

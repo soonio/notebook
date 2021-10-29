@@ -1,4 +1,4 @@
-![logo](_media/icon.svg)
+![logo](_media/avatar.png ':size=100x100')
 
 # [清流的烂笔头呀](http://iosoon.cn/#/?id=清流的小本本) <small>1.0</small>
 
