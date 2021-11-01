@@ -13,17 +13,13 @@
   - [Mysql](storage/mysql.md)
   - [Redis](storage/redis.md)
 - 常用软件安装
-  - [PHP72源码安装](install/php72.md) 
-- PHP
-  - [扩展](php/ext.md)
-  - [常见问题](php/PHP常见问题.md)
-  - [异常及解决](php/common.md)
-  - [Composer私有库](php/composer私有仓库搭建.md)
-  - [PSR](php/psr.md)
-  - [编码规范](php/standard-php7.md) 
-  - [PHP连续数字索引产生的问题](php/PHP连续数字索引产生的问题.md)
+  - [PHP72](install/php72.md)
+  - [docker](docker/install.md)
+- 编程
+  - [PHP编码规范](program/standard-php7.md)
+  - [PHP](program/php.md)
+  - [Composer-package](program/composer-package.md)
 - Docker
-  - [安装及配置](docker/install.md)
   - [常用命令](docker/cmd.md)
   - [网络管理](docker/network.md)
   - [Docker应用](docker/usages.md)
