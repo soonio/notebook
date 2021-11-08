@@ -10,7 +10,7 @@
 [编程思想](/other/oop.md)、
 [Redis缓存](/storage/redis.md)、
 [Docker容器](/docker/install.md)、
-[工作工具方法](/work/gitlab.md)、
+[工作工具方法](/install/gitlab.md)、
 网络编程、
 微服务、
 SaaS服务、
