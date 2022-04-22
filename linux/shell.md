@@ -84,6 +84,3 @@ send "$password\r"
 interact
 ```
 
-
-
-Update At : {docsify-updated}

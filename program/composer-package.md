@@ -1,7 +1,3 @@
-## 概述
-
-
-
 ## 环境说明
 
 为了避免安装PHP及composer环境，本文档使用docker容器进行搭建
@@ -10,32 +6,17 @@
 
 ## 环境构建
 
-- 以下操作都在宿主机的`/data/www/satis`下进行,所先创建目录，并切入进去
-
   ```bash
-  mkdir -p /data/www/satis && cd /data/www/satis
-  ```
-
-- 拉取镜像
-
-  ```bash
-  docker pull composer/satis
-  ```
-
-- 下载composer命令
-
-  ```bash
-  cd /data/www/satis \
+  docker pull composer/satis \
+  && mkdir -p /data/www/satis && cd /data/www/satis \
   && wget https://getcomposer.org/download/1.10.6/composer.phar \
   && mv composer.phar composer \
-  && chmod u+x composer
+  && chmod u+x composer \
+  && touch satis.json \
+  && touch auth.json 
   ```
-
-  > 也可以从gitlab下载安装,手动放到指定位置
-
-- 创建配置文件`touch /data/www/satis/satis.json`
-
   ```json
+  # satis.json
   {
     "name": "io/soon",
     "homepage": "http://pks.iosoon.cn",
@@ -47,29 +28,10 @@
     }
   }
   ```
-
-  - name 私有仓库的名称而已
-  - homepage 私有composer仓库的地址
-  - repositories 私有仓库的版本管理工具
-  - require 私有仓库对应的包名
-
-- 创建对应的授权文件`touch /data/www/satis/auth.json`
-
   ```json
-  {
-      "github-oauth": {
-          "github.com": "ed34668322f4f2c42f5a353ecedb8c4d49882262一个测试的密钥"
-      }
-  }
+  # auth.json
+  { "github-oauth": { "github.com": "a secret key" } }
   ```
-
-  > 上面的github.com的值，是从github中获取的token
-  >
-  > 也可以省略该步骤，在运行容器的时候手动填写Token
->
-  > github可以使用auth配置认证gitee不行，需要使用账户密码模式才能无交互的下拉带啊吗
-  
-  
 
 ## 生成网站
 

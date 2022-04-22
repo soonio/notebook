@@ -62,7 +62,3 @@ rsync -rzvt
 > 通过`man rsync`可以看到-rzvt 分别意思为递归目录/压缩/显示同步信息/保留文件的时间信息  
 > `--delete` 删除远程服务器中`$(pwd)`中没有的文件  
 > `--exclude` 保留这些`$(pwd)`中没有的文件
-
-
-
-Update At : {docsify-updated}

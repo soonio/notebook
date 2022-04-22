@@ -1,14 +1,13 @@
 # 用letsencrypt.sh脚本为nginx 配置免费https证书
 
 ## STEP 1 下载文件
-```
+```bash
 wget https://raw.githubusercontent.com/xdtianyu/scripts/master/lets-encrypt/letsencrypt.conf
-
 wget https://raw.githubusercontent.com/xdtianyu/scripts/master/lets-encrypt/letsencrypt.sh
 ```
 
 ## STEP 2 修改letsencrypt.conf文件的参数为以下参数
-```
+```ini
 # only modify the values, key files will be generated automaticly.
 ACCOUNT_KEY="letsencrypt-account.key"
 DOMAIN_KEY="xxx.key" # 自己命名
@@ -19,18 +18,20 @@ DOMAINS="DNS:mtian.net,DNS:www.mtian.net" #你的网站域名，多个域名用,
 ```
 ## STEP 3 配置nginx serve config
 配置以下内容到当前要生成的doman的server配置中，让letsencrypt发起http请求认证，注意以下配置为网站根目录
-```
-location ^~ /.well-known/acme-challenge/ {
+```nginx
+{
+  location ^~ /.well-known/acme-challenge/ {
        alias [web root]/.well-known/acme-challenge/;
        try_files $uri =404;
+  }
 }
 ```
 
-重启nginx或者 nginx -s reload
+重启nginx或者 `nginx -s reload`
 
 ## STEP 4 执行文件，生成https所需要的ssl证书文件
 添加执行权限并执行
-```
+```bash
 chmod +x letsencrypt.sh
 
 ./letsencrypt.sh letsencrypt.conf
@@ -39,7 +40,7 @@ chmod +x letsencrypt.sh
 
 ## STEP 4 修改nginx.conf 加入https配置
 加入以下配置
-```
+```nginx
 server {
     listen       443 ssl;
     server_name  www.xxx.com;
@@ -61,7 +62,7 @@ server {
 
 ## 附录相关文件原文
 ### letsencrypt.conf
-```
+```ini
 # only modify the values, key files will be generated automaticly.
 ACCOUNT_KEY="letsencrypt-account.key"
 DOMAIN_KEY="pre-weapp.datuhongan.com.key"
@@ -73,7 +74,7 @@ DOMAINS="DNS:pre-weapp.datuhongan.com"
 
 ### letsencrypt.sh
 
-```
+```shell
 #!/bin/bash
 
 # Usage: /etc/nginx/certs/letsencrypt.sh /etc/nginx/certs/letsencrypt.conf
@@ -154,6 +155,5 @@ fi
 echo -e "\e[01;32mNew cert: $DOMAIN_CHAINED_CRT has been generated\e[0m"
 
 #service nginx reload
-
 
 ```

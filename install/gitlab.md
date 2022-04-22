@@ -207,6 +207,3 @@ rpm -Uvh gitlab-ce-10.8.4-ce.0.el6.x86_64.rpm
 gitlab-ctl reconfigure
 ```
 
-
-
-Update At : {docsify-updated}

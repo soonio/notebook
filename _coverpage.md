@@ -1,4 +1,4 @@
-![logo](_media/icon.svg)
+![logo](_media/avatar.png ':size=100x100')
 
 # [清流<small>小本本</small>](http://iosoon.cn/#/?id=清流的小本本)
 
