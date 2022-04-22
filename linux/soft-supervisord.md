@@ -78,6 +78,8 @@ systemctl enable supervisord.service
   # 保险起见，还是停止所有服务后，在重启
   supervisorctl stop all
   supervisorctl shutdown && supervisord
+  # 使用更新命令也行
+  supervisorctl update
   
   # 查看状态
   supervisorctl status

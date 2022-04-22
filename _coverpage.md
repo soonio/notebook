@@ -1,6 +1,6 @@
 ![logo](_media/icon.svg)
 
-# [清流的烂笔头呀](http://iosoon.cn/#/?id=清流的小本本) <small>1.0</small>
+# [清流<small>小本本</small>](http://iosoon.cn/#/?id=清流的小本本)
 
 > 记下来📒、思考🤔
 
