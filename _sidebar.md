@@ -1,3 +1,5 @@
+- 文章
+  - [基于ssh和rsync的快速发布](article/deploy.md) 
 - Linux
   - [常用命令](linux/cmd.md)
   - [Shell](linux/shell.md)
