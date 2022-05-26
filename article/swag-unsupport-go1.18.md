@@ -1,9 +1,9 @@
 
-### 示例文件
+## 示例文件
 
 - pkg/utils/util.go
-```go
 
+```go
 //118STA
 
 func Or[v any](assert bool, yes, no v) v {
@@ -15,10 +15,9 @@ func Or[v any](assert bool, yes, no v) v {
 }
 
 //118END
-
 ```
 
-### 处理脚本
+## 处理脚本
 
 ```shell
 #!/usr/bin/env zsh
@@ -44,3 +43,7 @@ swag fmt && swag init --md ./docs
 
 recovery pkg/utils/util.go
 ```
+
+## 原理
+
+  在执行swag命令前，使用sed命令把对应的代码注释掉，然后在swag文档生成后，再取消注释
