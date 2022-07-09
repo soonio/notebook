@@ -1,6 +1,7 @@
 - 文章
   - [swag不支持go1.18泛型的临时解决方案](article/swag-unsupport-go1.18.md) 
   - [基于ssh和rsync的快速发布](article/deploy.md) 
+  - [go的defer、panic、recover](article/go-defer-panic-recover.md)
 - Linux
   - [常用命令](linux/cmd.md)
   - [Shell](linux/shell.md)
