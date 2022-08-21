@@ -10,15 +10,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: 测试命令是否存在
-        run: rsync -h
-
-      # Runs a set of commands using the runners shell
-      - name: 校验密钥能力试试看
+      - name: 设置密钥
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          pwd
-          echo ${{secrets.USERNAME}}
-          echo -n ${{secrets.ESNAME}} | md5sum
-          echo -n 'QingLiu2022' | md5sum
+          mkdir "$HOME/.ssh"
+          echo "${{secrets.IO_PRIVATE_KEY}}" > "$HOME/.ssh/deploy_key"
+
+      - name: 发送文件
+        run: |
+          rsync -rzvt -e "ssh -i $HOME/.ssh/deploy_key" $(pwd)/* ${{secrets.IO_USER}}@${{secrets.IO_HOST}}:/data/web/notebook2
+          curl https://api.day.app/${{secrets.BARK_TOKEN}}/NoteBook/发布成功
