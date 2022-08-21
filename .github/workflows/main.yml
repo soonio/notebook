@@ -18,7 +18,5 @@ jobs:
 
       - name: 发送文件
         run: |
-          ls -al $HOME/.ssh
-          cat $HOME/.ssh/deploy_key
-          rsync -rzvt -e "ssh -i $HOME/.ssh/deploy_key" $(pwd)/* ${{secrets.IO_USER}}@${{secrets.IO_HOST}}:/data/web/notebook2
+          rsync -rzvt -e "ssh -i $HOME/.ssh/deploy_key -o StrictHostKeyChecking=no" $(pwd)/* ${{secrets.IO_USER}}@${{secrets.IO_HOST}}:/data/web/notebook2
           curl https://api.day.app/${{secrets.BARK_TOKEN}}/NoteBook/发布成功
