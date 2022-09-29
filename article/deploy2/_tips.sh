@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+# 尝试从.deploy.env文件中读取远程服务器和密码
+#if [ -f ".deploy.env" ]; then
+#  while read -r row; do
+#    if [ "${row:0:1}" != "#" ]; then
+#      export "${row?}"
+#    fi
+#  done < .deploy.env
+#else
+#  echo -e "#请开启下面配置\n#ProdServer=username@192.168.1.110\n#请开启下面配置\n#ProdPassword=password-string" > .deploy.env
+#fi
+
 # 飞书通知
 function tips() {
   local _token="feishu-token-string"
