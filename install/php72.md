@@ -85,3 +85,25 @@
 
   ```
 
+## 自动重启
+
+  - 启用进程id保存到文件 (/usr/local/php7/etc/php-fpm.conf => pid=run/php-fpm.pid)
+  - 编写systemctl管理的配置文件 `/usr/lib/systemd/system/php-fpm.service`
+    ```
+    [Unit]
+    Description=The PHP FastCGI Process Manager
+    After=system.target network.target
+    
+    [Service]
+    Type=forking
+    PIDFile=/usr/local/php7/var/run/php-fpm.pid
+    ExecStartPre=/usr/bin/rm -f /usr/local/php7/var/run/php-fpm.pid
+    ExecStart=/usr/local/php7/sbin/php-fpm 
+    ExecReload=/bin/kill -USR2 $MAINPID
+    PrivateTmp=true
+    
+    [Install]
+    WantedBy=multi-user.target
+    ```
+  - systemctl enable php-fpm.service (设置开机启动)
+  - systemctl daemon-reload 重启服务
