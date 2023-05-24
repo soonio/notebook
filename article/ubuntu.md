@@ -66,4 +66,4 @@ sudo snap install go --classic
 
 - JetBrains Gateway
 - JetBrains Fleet
-- VScode remote development %  
+- VScode remote development
