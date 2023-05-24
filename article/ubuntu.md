@@ -1,8 +1,6 @@
-## UBUNTU 作为开发服务机器
-
 > 本机mac电脑年纪太大了，比较卡顿，正好有闲置的电脑主机作为服务器，把开发环境都搬上去。以下为操作流程：
 
-### 制作U盘景象
+## 制作U盘景象
 ```bash
 # 转换iso为dmg
 hdiutil convert -format UDRW -o ubuntu-22.04.2-live-server-amd64.dmg ubuntu-22.04.2-live-server-amd64.iso
@@ -17,7 +15,7 @@ diskutil unmountDisk /dev/diskN
 sudo dd if=./ubuntu-22.04.2-live-server-amd64.dmg of=/dev/disk2 bs=1m
 ```
 
-### 安装PHP
+## 安装PHP
 ```bash
 sudo apt-cache policy php
 
@@ -35,7 +33,7 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer 
 ```
 
-### 安装Node
+## 安装Node
 
 ```bash
 # 安装默认版本(v12)
@@ -54,7 +52,7 @@ sudo corepack enable npm
 sudo corepack enable yarn
 ```
 
-### 安装golang
+## 安装golang
 ```
 # 安装 Snap 包管理器
 sudo apt update
@@ -64,7 +62,7 @@ sudo apt install snapd
 sudo snap install go --classic
 ```
 
-### 直接使用remote development
+## 直接使用remote development
 
 - JetBrains Gateway
 - JetBrains Fleet
