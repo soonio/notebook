@@ -53,13 +53,19 @@ sudo corepack enable yarn
 ```
 
 ## 安装golang
-```
+```bash
 # 安装 Snap 包管理器
 sudo apt update
 sudo apt install snapd
 
 # 安装 Go 的最新稳定版本
 sudo snap install go --classic
+```
+
+## 设置默认编辑器
+
+```bash
+sudo update-alternatives --config editor
 ```
 
 ## 直接使用remote development
