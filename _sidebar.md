@@ -3,7 +3,7 @@
   - [基于ssh和rsync的快速发布](article/deploy.md) 
   - [go的defer、panic、recover](article/go-defer-panic-recover.md)
   - [几个可以用来构建本地发布脚本的命令](article/deploy2.md)
-  - [github-action](article/github-aciton.md)
+  - [github-action](article/github-action.md)
   - [使用ubuntu作为开发环境](article/ubuntu.md)
 - Linux
   - [常用命令](linux/cmd.md)
