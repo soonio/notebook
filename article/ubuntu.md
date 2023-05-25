@@ -1,6 +1,6 @@
 > 本机mac电脑年纪太大了，比较卡顿，正好有闲置的电脑主机作为服务器，把开发环境都搬上去。以下为操作流程：
 
-## 制作U盘景象
+## 制作U盘镜像
 ```bash
 # 转换iso为dmg
 hdiutil convert -format UDRW -o ubuntu-22.04.2-live-server-amd64.dmg ubuntu-22.04.2-live-server-amd64.iso
