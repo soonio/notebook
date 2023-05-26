@@ -1,11 +1,11 @@
 - 文章
-  - [swag不支持go1.18泛型的临时解决方案](article/swag-unsupport-go1.18.md) 
-  - [基于ssh和rsync的快速发布](article/deploy.md) 
+  - [在go-web服务使用swagger](article/golang-with-openapi3.md)
+  - [使用ubuntu作为开发环境](article/ubuntu.md)
+  - [github-action](article/github-action.md)
   - [go的defer、panic、recover](article/go-defer-panic-recover.md)
   - [几个可以用来构建本地发布脚本的命令](article/deploy2.md)
-  - [github-action](article/github-action.md)
-  - [使用ubuntu作为开发环境](article/ubuntu.md)
-  - [在go-web服务使用swagger](article/golang-with-openapi3.md)
+  - [swag不支持go1.18泛型的临时解决方案](article/swag-unsupport-go1.18.md) 
+  - [基于ssh和rsync的快速发布](article/deploy.md) 
 - Linux
   - [常用命令](linux/cmd.md)
   - [Shell](linux/shell.md)
