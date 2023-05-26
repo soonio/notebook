@@ -5,6 +5,7 @@
   - [几个可以用来构建本地发布脚本的命令](article/deploy2.md)
   - [github-action](article/github-action.md)
   - [使用ubuntu作为开发环境](article/ubuntu.md)
+  - [在go-web服务使用swagger](article/golang-with-openapi3.md)
 - Linux
   - [常用命令](linux/cmd.md)
   - [Shell](linux/shell.md)

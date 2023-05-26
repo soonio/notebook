@@ -11,7 +11,7 @@ diskutil list
 # 卸载U盘
 diskutil unmountDisk /dev/diskN
 
-# 把dmg安装到u盘上(复制)
+# 把dmg安装到u盘上(复制,时间比较久)
 sudo dd if=./ubuntu-22.04.2-live-server-amd64.dmg of=/dev/disk2 bs=1m
 ```
 
@@ -20,7 +20,6 @@ sudo dd if=./ubuntu-22.04.2-live-server-amd64.dmg of=/dev/disk2 bs=1m
 sudo apt-cache policy php
 
 sudo add-apt-repository ppa:ondrej/php --yes &> /dev/null
-
 
 sudo apt update
 
@@ -39,11 +38,12 @@ sudo chmod +x /usr/local/bin/composer
 # 安装默认版本(v12)
 sudo apt install nodejs build-essential -y
 
-# 安装指定版本
+# 需要先完全卸载之前版本的nodejs，以及安装curl
 sudo apt purge nodejs
 sudo apt autoremove 
 sudo apt update
 sudo apt install -y curl
+# 安装指定版本
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install nodejs build-essential -y
 
