@@ -1,5 +1,5 @@
 - 文章
-  - [使用goctl把mysql表转换成go struct](article/custom-request.md)
+  - [使用goctl把mysql表转换成go struct](article/use-goctl-for-table.md)
   - [在go-web服务使用swagger](article/golang-with-openapi3.md)
   - [使用ubuntu作为开发环境](article/ubuntu.md)
   - [github-action](article/github-action.md)
