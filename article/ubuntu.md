@@ -15,7 +15,25 @@ diskutil unmountDisk /dev/diskN
 sudo dd if=./ubuntu-22.04.2-live-server-amd64.dmg of=/dev/disk2 bs=1m
 ```
 
-## 安装PHP
+## 安装 NGINX
+```bash
+sudo apt update
+sudo apt install nginx
+```
+
+## 安装 MYSQL
+```bash
+wget https://repo.mysql.com/mysql-apt-config_0.8.25-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.25-1_all.deb
+sudo apt-get update
+sudo apt-get install mysql-server
+systemctl status mysql
+```
+
+> [下载地址](https://dev.mysql.com/downloads/repo/apt/)
+> [安装说明](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/)
+
+## 安装 PHP
 ```bash
 sudo apt-cache policy php
 
@@ -32,7 +50,7 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer 
 ```
 
-## 安装Node
+## 安装 Node
 
 ```bash
 # 安装默认版本(v12)
@@ -52,14 +70,21 @@ sudo corepack enable npm
 sudo corepack enable yarn
 ```
 
-## 安装golang
+## 安装 Snap 包管理器
 ```bash
-# 安装 Snap 包管理器
 sudo apt update
 sudo apt install snapd
+```
 
+## 基于 Snap 安装golang
+```bash
 # 安装 Go 的最新稳定版本
 sudo snap install go --classic
+```
+
+## 基于 Snap 安装redis
+```bash
+sudo snap install redis
 ```
 
 ## 设置默认编辑器
