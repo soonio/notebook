@@ -1,5 +1,3 @@
-## 使用goctl把mysql表转换成go struct
-
 ```bash
 #!/usr/bin/env bash
 

@@ -19,6 +19,9 @@ sudo dd if=./ubuntu-22.04.2-live-server-amd64.dmg of=/dev/disk2 bs=1m
 ```bash
 sudo apt update
 sudo apt install nginx
+
+# 服务管理
+service nginx status
 ```
 
 ## 安装 MYSQL
@@ -28,6 +31,9 @@ sudo dpkg -i mysql-apt-config_0.8.25-1_all.deb
 sudo apt-get update
 sudo apt-get install mysql-server
 systemctl status mysql
+
+# 服务管理
+service mysql status
 ```
 
 > [下载地址](https://dev.mysql.com/downloads/repo/apt/)
@@ -70,22 +76,29 @@ sudo corepack enable npm
 sudo corepack enable yarn
 ```
 
-## 安装 Snap 包管理器
-```bash
-sudo apt update
-sudo apt install snapd
-```
-
-## 基于 Snap 安装golang
+## 安装golang
 ```bash
 # 安装 Go 的最新稳定版本
-sudo snap install go --classic
+curl -SL https://dl.google.com/go/go1.20.6.linux-amd64.tar.gz -o go.tar.gz && sudo tar -C /usr/local -xzf go.tar.gz
+echo "export PATH=\$PATH:/usr/local/go/bin" >> .profile
+source .profile
+go version
 ```
+> 参考文档 https://go.dev/doc/install
 
-## 基于 Snap 安装redis
+## 安装 redis
 ```bash
-sudo snap install redis
+sudo apt install lsb-release curl gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+
+sudo apt-get update
+sudo apt-get install redis
+
+sudo systemctl enable redis-server
 ```
+> 参考文档 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ## 设置默认编辑器
 
