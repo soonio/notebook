@@ -22,6 +22,9 @@ sudo apt install nginx
 
 # 服务管理
 service nginx status
+
+# 服务管理
+service nginx status
 ```
 
 ## 安装 MYSQL
@@ -31,6 +34,9 @@ sudo dpkg -i mysql-apt-config_0.8.25-1_all.deb
 sudo apt-get update
 sudo apt-get install mysql-server
 systemctl status mysql
+
+# 服务管理
+service mysql status
 
 # 服务管理
 service mysql status
@@ -84,9 +90,23 @@ echo "export PATH=\$PATH:/usr/local/go/bin" >> .profile
 source .profile
 go version
 ```
-> 参考文档 https://go.dev/doc/install
+> `--classic` 是指让snap使用传统方式安装go，go可以访问系统资源  
+> [golang安装](https://go.dev/doc/install)
 
-## 安装 redis
+## redis 安装参考文档
+
+    [文档](https://redis.io/docs/getting-started/installation/install-redis-on-linux/)
+
+## 基于 Snap 安装 redis
+```bash
+sudo snap install redis
+
+# 服务管理
+snap services redis
+```
+> 默认是`--strict`进行隔离
+
+## 直接安装 redis
 ```bash
 sudo apt install lsb-release curl gpg
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
@@ -95,10 +115,7 @@ echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://pack
 
 sudo apt-get update
 sudo apt-get install redis
-
-sudo systemctl enable redis-server
 ```
-> 参考文档 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ## 设置默认编辑器
 
