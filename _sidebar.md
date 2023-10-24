@@ -1,16 +1,27 @@
-- [几个常用的git操作](article/git-cmd.md)
-- [Golang生成兑换码的一种思路](article/gen-redemption-code.md)
-- [windows11](article/windows-active.md)
-- [systemctl和service命令的区别](article/two-cmd-different.md)
-- [使用systemctl管理golang服务](article/use-systemctl-manage-go-server)
-- [使用goctl把mysql表转换成go struct](article/use-goctl-for-table.md)
-- [在go-web服务使用swagger](article/golang-with-openapi3.md)
-- [使用ubuntu作为开发环境](article/ubuntu.md)
-- [github-action](article/github-action.md)
-- [go的defer、panic、recover](article/go-defer-panic-recover.md)
-- [几个可以用来构建本地发布脚本的命令](article/deploy2.md)
-- [swag不支持go1.18泛型的临时解决方案](article/swag-unsupport-go1.18.md) 
-- [基于ssh和rsync的快速发布](article/deploy.md) 
+- 最近文章
+  - [几个常用的git操作](article/git-cmd.md)
+  
+  - [systemctl和service命令的区别](article/two-cmd-different.md)
+  - [使用systemctl管理golang服务](article/use-systemctl-manage-go-server)
+  - [使用ubuntu作为开发环境](article/ubuntu.md)
+  - [github-action](article/github-action.md)
+  
+  - [几个可以用来构建本地发布脚本的命令](article/deploy2.md)
+  - [swag不支持go1.18泛型的临时解决方案](article/swag-unsupport-go1.18.md) 
+  - [基于ssh和rsync的快速发布](article/deploy.md) 
+
+- [Go]
+  - [Golang生成兑换码的一种思路](go/gen-redemption-code.md)
+  - [在go-web服务使用swagger](go/golang-with-openapi3.md)
+  - [go的defer、panic、recover](go/go-defer-panic-recover.md)
+  - [使用goctl把mysql表转换成go struct](go/use-goctl-for-table.md)
+
+- [MySQL]
+  - [事件](mysql/event.md)
+
+- 操作系统
+  - [windows11](article/windows-active.md)
+
 - Linux
   - [常用命令](linux/cmd.md)
   - [Shell](linux/shell.md)
@@ -54,4 +65,4 @@
   - [实践[Gitlab]](docker/docker-gitlab.md)
   - [容器化测试环境构建](docker/test.md)
 - 其他
-  - [HTTP](other/http.md)
+  - [HTTP状态码](other/http.md)
