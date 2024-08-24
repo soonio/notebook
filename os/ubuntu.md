@@ -46,17 +46,26 @@ service mysql status
 > [安装说明](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/)
 
 ## 安装 PHP
+
+### 安装swoole-cli版本的PHP
+```bash
+wget https://github.com/jingjingxyk/swoole-cli/releases/download/build-native-php-v0.1.1/php-cli-v7.4.33-linux-x64.tar.xz -O php.tar.xz
+tar -xvf php.tar.xz
+sudo mv php /usr/local/bin
+
+
+wget https://github.com/composer/composer/releases/download/2.6.5/composer.phar -O composer
+sudo chmod +x composer
+sudo mv composer /usr/local/bin
+```
+
+### 编译安装
 ```bash
 sudo apt-cache policy php
-
 sudo add-apt-repository ppa:ondrej/php --yes &> /dev/null
-
 sudo apt update
-
 sudo apt install php7.4
-
 sudo apt install php7.4-simplexml php7.4-curl php7.4-dom php7.4-zip php7.4-swoole  php7.4-redis -y
-
 wget https://github.com/composer/composer/releases/download/2.2.21/composer.phar
 sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer 
@@ -65,24 +74,25 @@ sudo chmod +x /usr/local/bin/composer
 ## 安装 Node
 
 ```bash
-# 安装默认版本(v12)
-sudo apt install nodejs build-essential -y
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
-# 需要先完全卸载之前版本的nodejs，以及安装curl
-sudo apt purge nodejs
-sudo apt autoremove 
-sudo apt update
-sudo apt install -y curl
-# 安装指定版本
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install nodejs build-essential -y
+NODE_MAJOR=20
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+
+sudo apt-get update
+sudo apt-get install nodejs -y
 
 # 启用npm和yarn
 sudo corepack enable npm
 sudo corepack enable yarn
 ```
+> [参考文档](https://github.com/nodesource/distributions)
 
-## 安装golang
+
+## 安装Golang
 ```bash
 # 安装 Go 的最新稳定版本
 curl -SL https://dl.google.com/go/go1.20.6.linux-amd64.tar.gz -o go.tar.gz && sudo tar -C /usr/local -xzf go.tar.gz
@@ -93,19 +103,6 @@ go version
 > `--classic` 是指让snap使用传统方式安装go，go可以访问系统资源  
 > [golang安装](https://go.dev/doc/install)
 
-## redis 安装参考文档
-
-    [文档](https://redis.io/docs/getting-started/installation/install-redis-on-linux/)
-
-## 基于 Snap 安装 redis
-```bash
-sudo snap install redis
-
-# 服务管理
-snap services redis
-```
-> 默认是`--strict`进行隔离
-
 ## 直接安装 redis
 ```bash
 sudo apt install lsb-release curl gpg
@@ -115,7 +112,17 @@ echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://pack
 
 sudo apt-get update
 sudo apt-get install redis
+
+# 服务管理(service || systemctl)
+sudo service redis-server start
+sudo systemctl status redis-server
+
+# 开机自启动
+sudo update-rc.d redis-server defaults
+
 ```
+
+> [文档](https://redis.io/docs/getting-started/installation/install-redis-on-linux/)
 
 ## 设置默认编辑器
 

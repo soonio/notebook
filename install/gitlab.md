@@ -2,9 +2,9 @@
 
 ## 官方教程
 
-[CentOS8安装](https://about.gitlab.com/install/#centos-8)
+[安装](https://about.gitlab.com/install)
 
-
+!> 官网默认使用的是gitlab-ee,需要改为gitlab-ce(社区版)
 
 ## 提前配置好域名解析
 

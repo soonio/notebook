@@ -2,6 +2,7 @@
 
 ```bash
 yum install -y nginx
+sudo apt install -y nginx
 ```
 
 ## 设置开机重启
@@ -28,7 +29,6 @@ yum install -y nginx
   WantedBy=multi-user.target
   ```
 
-  
 
 - 生效配置文件
 
