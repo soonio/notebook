@@ -72,3 +72,4 @@
   - [容器化测试环境构建](docker/test.md)
 - 其他
   - [HTTP状态码](other/http.md)
+  - [服务器Nginx配置](other/web-server-nginx.md)
