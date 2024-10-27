@@ -1,3 +1,56 @@
+## Nginx 配置直播推流服务
+
+
+### Nginx 及 rtmp 模块下载准备
+```bash
+sudo apt install gcc libpcre3 libpcre3-dev zlib1g zlib1g-dev openssl libssl-dev make
+
+wget https://nginx.org/download/nginx-1.25.3.tar.gz && tar -xvf nginx-1.25.3.tar.gz
+wget https://github.com/arut/nginx-rtmp-module/archive/refs/tags/v1.2.2.tar.gz
+```
+
+###  安装及配置
+```bash
+sudo groupadd -r www \
+&& sudo useradd -r -g www -s /bin/false -M www
+
+mkdir /var/tmp/nginx
+
+sudo ./configure \
+    --prefix=/usr/local/nginx \
+    --conf-path=/usr/local/nginx/conf/nginx.conf \
+    --pid-path=/usr/local/nginx/conf/nginx.pid \
+    --lock-path=/var/lock/nginx.lock \
+    --error-log-path=/var/log/nginx/error.log \
+    --http-log-path=/var/log/nginx/access.log \
+    --with-http_gzip_static_module \
+    --http-client-body-temp-path=/var/tmp/nginx/client \
+    --http-proxy-temp-path=/var/tmp/nginx/proxy \
+    --http-fastcgi-temp-path=/var/tmp/nginx/fastcgi \
+    --http-uwsgi-temp-path=/var/tmp/nginx/uwsgi \
+    --http-scgi-temp-path=/var/tmp/nginx/scgi \
+    --with-http_stub_status_module \
+    --with-http_ssl_module \
+    --add-module=/home/ubuntu/nginx-http-flv-module-1.2.11 \
+    --user=ubuntu \
+    --group=ubuntu
+
+sudo make && sudo make install
+```
+
+### 推流地址
+
+  - rtmp://192.168.20.51/live/s1
+  - rtmp://192.168.20.51/live/s2
+
+### 拉流地址
+    
+  - http://192.168.20.51/live?&app=live&stream=s1
+  - http://192.168.20.51/live?&app=live&stream=s2
+
+### Nginx 配置
+
+```nginx configuration
 worker_processes  1; #运行在 Windows 上时，设置为 1，因为 Windows 不支持 Unix domain socket
 error_log /var/log/nginx/error.log error;
 
@@ -107,4 +160,4 @@ rtmp {
     }
 
 }
-
+```

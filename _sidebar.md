@@ -73,3 +73,4 @@
 - 其他
   - [HTTP状态码](other/http.md)
   - [服务器Nginx配置](other/web-server-nginx.md)
+  - [直播Nginx配置](other/live.md)
