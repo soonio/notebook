@@ -1,6 +1,3 @@
-## Nginx 配置直播推流服务
-
-
 ### Nginx 及 rtmp 模块下载准备
 ```bash
 sudo apt install gcc libpcre3 libpcre3-dev zlib1g zlib1g-dev openssl libssl-dev make
