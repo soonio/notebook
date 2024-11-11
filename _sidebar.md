@@ -60,6 +60,8 @@
   - [ubuntu](os/ubuntu.md)
 
 - 其他
+  - [Beanstalkd](other/beanstalkd.md) 
+  - [ETCD](other/etcd.md) 
   - [文件共享平台](other/filesbrowser.md)
   - [HTTP状态码](other/http.md)
   - [Nginx配置](other/nginx.md)
