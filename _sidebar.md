@@ -14,6 +14,7 @@
   - [安装](docker/install.md)
   - [网络管理](docker/network.md)
   - [应用apachebench](docker/usage-ab)
+  - [服务组](docker/usage-compose.md)
 
 
 - Git
