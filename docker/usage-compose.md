@@ -4,6 +4,16 @@
 name: center
 
 services:
+  pgs:
+  container_name: postgresql
+  image: postgres:alpine
+  volumes:
+    - /var/container/postgres:/var/lib/postgresql/data
+  ports:
+    - "5432:5432"
+  environment:
+    POSTGRES_PASSWORD: 1234567
+    LANG: C.UTF-8
   mysql:
     container_name: mysql
     image: mysql:9
