@@ -1,6 +1,6 @@
 .github/workflow/main.yaml
 
-```yaml
+```
 name: deploy-into-TencentCloud
 
 on:

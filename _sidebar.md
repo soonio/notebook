@@ -1,77 +1,75 @@
-- 最近文章
-  - [几个常用的git操作](article/git-cmd.md)
-  
-  - [systemctl和service命令的区别](article/two-cmd-different.md)
-  - [使用systemctl管理golang服务](article/use-systemctl-manage-go-server)
-  - [github-action](article/github-action.md)
-  
-  - [几个可以用来构建本地发布脚本的命令](article/deploy2.md)
-  - [swag不支持go1.18泛型的临时解决方案](article/swag-unsupport-go1.18.md) 
-  - [基于ssh和rsync的快速发布](article/deploy.md) 
-  - [基于oss的前端文件发布方案](article/基于oss的前端文件发布方案.md)
+- [Deploy]
+  - [Declare使用](deploy/declare.md)
+  - [基于ssh和rsync的快速发布](deploy/deploy.md)
+  - [用来构建本地发布脚本的命令](deploy/deploy2.md)
+  - [github-action](deploy/github-action.md)
+  - [基于oss的前端文件发布方案](deploy/基于oss的前端文件发布方案.md)
 
-- [Nginx安装及配置](nginx.md)
+
+- Docker
+  - [常用命令](docker/cmd.md)
+  - [实践Gitlab](docker/docker-gitlab.md)
+  - [实践Mysql](docker/docker-mysql.md)
+  - [实践Redis](docker/docker-redis.md)
+  - [安装](docker/install.md)
+  - [网络管理](docker/network.md)
+  - [应用apachebench](docker/usage-ab)
+
+
+- Git
+  - [几个常用的git操作](git/git-cmd.md)
+  - [GitLab](git/git-runner.md)
+  - [git-flow](git/gitflow.md)
+  - [GitLab](git/gitlab.md)
+  - [GitLab Runner](git/gitlab-runner.md)
+
 
 - [Go]
   - [Golang生成兑换码的一种思路](go/gen-redemption-code.md)
-  - [在go-web服务使用swagger](go/golang-with-openapi3.md)
-  - [go的defer、panic、recover](go/go-defer-panic-recover.md)
   - [构建时注入版本信息](go/go-build-vars.md)
+  - [go的defer、panic、recover](go/go-defer-panic-recover.md)
+  - [在go-web服务使用swagger](go/golang-with-openapi3.md)
+
+
+- Linux
+  - [常用命令](linux/cmd.md)
+  - [计划任务](linux/crontab.md)
+  - [Deepin自定义桌面图标](linux/deepin-icon.md)
+  - [软件安装](linux/install.md)
+  - [软件安装](linux/Linux修改内核满足高并发.md)
+  - [免密登录](linux/no-password.md)
+  - [进程管理](linux/process.md)
+  - [文件共享](linux/samba.md)
+  - [Shell](linux/shell.md)
+  - [基础软件](linux/soft.md)
+  - [SSH](linux/ssh.md)
 
 - [MySQL]
-  - [事件](mysql/event.md)
-  - [CTE](mysql/cte.md)
-  - [存储过程DEBUG](mysql/procedure.md)
   - [备份和恢复](mysql/backup-and-recovery.md)
+  - [CTE](mysql/cte.md)
+  - [事件](mysql/event.md)
+  - [创建账户](mysql/mysql.md)
+  - [优化](mysql/MySQL优化.md)
+  - [存储过程DEBUG](mysql/procedure.md)
+  - [恢复Mysql](mysql/recovery-mysql.md)
 
-- 操作系统
+- OS
   - [windows11](os/windows-active.md)
   - [windows11一些开发设置](os/windows-settings.md)
   - [ubuntu](os/ubuntu.md)
 
-- Linux
-  - [常用命令](linux/cmd.md)
-  - [Shell](linux/shell.md)
-  - [基础软件](linux/soft.md)
-  - [软件安装](linux/install.md)
-  - [计划任务](linux/crontab.md)
-  - [进程管理](linux/process.md)
-  - [文件共享](linux/samba.md)
-  - [免密登录](linux/no-password.md)
-  - [SSH](linux/ssh.md)
-  - [Deepin自定义桌面图标](linux/deepin-icon.md)
-  - [免费证书](linux/linux下生成免费证书.md)
-- Storage
-  - [Mysql](storage/mysql.md)
-  - [Mysql优化](storage/MySQL优化.md)
-  - [删库不跑路](storage/recovery-mysql.md)
-  - [Redis](storage/redis.md)
-- 常用软件安装
-  - [PHP72](install/php72.md)
-  - [docker](docker/install.md)
-  - [PHP8.x](install/php8.md)
-  - [文件共享平台](install/filesbrowser.md)
-  - [webhook](install/webook.md)
-  - [Supervisord](install/soft-supervisord.md)
-  - [RabbitMQ](install/rabbitmq.md)
-  - [GitLab](install/gitlab.md)
-  - [Git-Runner](install/git-runner.md)
-  - [其他工具](install/other.md)
-- 编程
-  - [PHP编码规范](program/standard-php7.md)
-  - [PHP](program/php.md)
-  - [Composer-package](program/composer-package.md)
-  - [git-flow](program/gitflow.md)
-- Docker
-  - [常用命令](docker/cmd.md)
-  - [网络管理](docker/network.md)
-  - [Docker应用](docker/usages.md)
-  - [实践[Mysql]](docker/docker-mysql.md)
-  - [实践[Redis]](docker/docker-redis.md)
-  - [实践[Gitlab]](docker/docker-gitlab.md)
-  - [容器化测试环境构建](docker/test.md)
 - 其他
+  - [文件共享平台](other/filesbrowser.md)
   - [HTTP状态码](other/http.md)
   - [Nginx配置](other/nginx.md)
   - [服务器Nginx配置](other/web-server-nginx.md)
   - [Nginx配置直播推流服务](other/live.md)
+
+- PHP
+  - [Package](php/composer-package.md)
+  - [ENV](php/env.md)
+  - [PHP](php/php.md)
+  - [PHP8](php/php8.md)
+  - [PHP72](php/php72.md)
+  - [PHP编码规范](php/standard-php7.md)
+  
